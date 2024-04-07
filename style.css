@@ -1,0 +1,86 @@
+div#NavBar {
+    background: black;
+    padding: 30px;
+    margin: 0px;
+    width: 100%;
+    position: fixed;
+    display: block;
+}
+
+a.homeMenuLink {
+    color: white;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 15px;
+}
+
+a.submenuLink {
+    color: white;
+    font-family: Helvetica, sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 15px;
+}
+
+a.pictureLink {
+    text-decoration: none;
+    padding: 15px;
+}
+
+a.textLink {
+    color: white;
+    font-family: Helvetica, sans-serif;
+}
+
+a:hover {
+    color: rgb(97, 187, 187);
+}
+
+a:active{
+    color: rgb(247, 247, 149);
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+body {
+    margin: 0%;
+}
+
+div.TextSection {
+    background: darkslategray;
+
+    color: white;
+    font-family: Helvetica, sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center;
+
+    width: 100%;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+div#PortfolioOverview {
+    width: 100%;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    border: 2px blue solid;
+}
+
+div.PictureTextElement {
+    padding: 100px;
+    border: 2px blue solid;
+    display: inline-block;
+}
+
+div#Footer {
+    background: black;
+    padding: 15px;
+    margin: 0px;
+    width: 100%;
+    display: block;
+}

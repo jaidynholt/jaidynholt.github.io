@@ -2,56 +2,129 @@
 <html>
     <head>
         <title>Jaidyn Holt Portfolio</title>
-
+        <link href="style.css" rel="styleSheet">
     </head>
 
     <body>
-        <!-- nav allows links -->
-        <nav>
-            <!-- Hyperlink opens in another tab when target="_blank" -->
-            <a href="http://www.google.com" target="_blank"> Google</a>
+        <!-- Top navigation bar -->
+        <div id = "NavBar">
+            <nav>
+                <a 
+                    class="homeMenuLink"
+                    href="index.html"
+                    target="_self">
+                    JAIDYN HOLT
+                </a>
+                <a 
+                    class="submenuLink"
+                    href="gameDevelopment.html"
+                    target="_self">
+                    Game Development
+                </a>
+                <a 
+                    class="submenuLink"
+                    href="aboutMe.html"
+                    target="_self">
+                    About Me
+                </a>
+                <a 
+                    class="pictureLink"
+                    href="mailto: jaidynholt2587@gmail.com"
+                    target="_blank">
+                    <img src="assets/emailIcon.png"
+                    alt="email link"
+                    style="width:30px;height:30px;">
+                </a>
+                <a 
+                    class="pictureLink"
+                    href="https://jaidynholt.myportfolio.com"
+                    target="_blank">
+                    <img src="assets/websiteIcon.png"
+                    alt="portfolio website link"
+                    style="width:30px;height:30px;">
+                </a>
+                <a 
+                    class="pictureLink"
+                    href="https://linkedin.com/in/jaidyn-holt-b44693271"
+                    target="_blank">
+                    <img src="assets/linkedinIcon.png"
+                    alt="linkedIn link"
+                    style="width:30px;height:30px;">
+                </a>
+                <a
+                    class="pictureLink"
+                    href="resume.pdf"
+                    target="_blank">
+                    <img src="assets/resumeButton.png"
+                    style="height:30px;">
+                </a>
+                
+            </nav>
+        </div>
 
-            <!-- Hyperlink to another html file in the same directory -->
-            <a href="aboutMe.html" target="_self"> About Me</a>
-
-            <!-- Hyperlink to direct email -->
-            <a href="mailto: jaidynholt2587@gmail.com" target="_self"> Email</a>
-
-            <!-- Hyperlink to another file in the same directory -->
-            <a href="resume.pdf" target="_blank" target="_self"> Resume</a>
-
-            <!-- Link to a class -->
-            <a href="#imageGallery" target="_self"> Images</a>
-        </nav>
-
-        <!-- Division: Introduction text and image -->
-        <div>
-            <!-- Profile pic -->
-            <img src="images/ssd_image1.png" alt="Profile picture" width="30%">
-
+        <div class="TextSection">
             <!-- Intro heading -->
-            <h1>Hello, my name is Jaidyn Holt.</h1>
-            <h2>University of Florida | Digital Arts and Sciences</h2>
+            <h1>Hello! My name is Jaidyn Holt.</h1>
 
             <!-- Bio text -->
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-                laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
-                irure dolor in reprehenderit in voluptate velit esse cillum 
-                dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-                non proident, sunt in culpa qui officia deserunt mollit anim id 
-                est laborum.
+                I'm a passionate, imaginative, and dependable creator dedicated to<br>
+                engaging storytelling through a creative combination of art and technology<br>
+                with an interest in the fields of game development and interactive media.
             </p>
         </div>
 
-        <!-- Division: image gallery -->
-        <div>
-            <section id="imageGallery"></class>
-                <h1>Solar Systems Down</h1>
-                    <img src="images/ssd_image1.png" alt="Solar Systems Down game screenshot of the start screen">
-            </section>
+        <div id="PortfolioOverview">
+            <div class="PictureTextElement">
+                <a 
+                    class="pictureLink"
+                    href="gameDevelopment.html"
+                    target="_self">
+                    <img src="images/ssd_image1.png"
+                    alt="Game development image link"
+                    style="width:120px;">
+                </a>
+            </div>
+        </div>
+
+        <div id="Footer">
+            <a 
+                class="homeMenuLink"
+                href="index.html"
+                target="_self">
+                JAIDYN HOLT
+            </a>
+            <a 
+                class="pictureLink"
+                href="mailto: jaidynholt2587@gmail.com"
+                target="_blank">
+                <img src="assets/emailIcon.png"
+                alt="email link"
+                style="width:30px;height:30px;">
+            </a>
+            <a 
+                class="pictureLink"
+                href="https://jaidynholt.myportfolio.com"
+                target="_blank">
+                <img src="assets/websiteIcon.png"
+                alt="portfolio website link"
+                style="width:30px;height:30px;">
+            </a>
+            <a 
+                class="pictureLink"
+                href="https://linkedin.com/in/jaidyn-holt-b44693271"
+                target="_blank">
+                <img src="assets/linkedinIcon.png"
+                alt="linkedIn link"
+                style="width:30px;height:30px;">
+            </a>
+            <a
+                class="pictureLink"
+                href="resume.pdf"
+                target="_blank">
+                <img src="assets/resumeButton.png"
+                style="height:30px;">
+            </a>
         </div>
 
     </body>
