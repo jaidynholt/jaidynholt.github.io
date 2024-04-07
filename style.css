@@ -60,26 +60,53 @@ div.TextSection {
     text-align: center;
 
     width: 100%;
-    padding-top: 120px;
+    padding-top: 150px;
     padding-bottom: 120px;
 }
 
-div#PortfolioOverview {
+div#ProjectGrid {
+    background:white;
     width: 100%;
-    padding-top: 120px;
-    padding-bottom: 120px;
-    border: 2px blue solid;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
-div.PictureTextElement {
-    padding: 100px;
-    border: 2px blue solid;
-    display: inline-block;
+a.PictureTextElement {
+    background: rgb(24, 44, 44);
+
+    text-decoration: none;
+
+    display: block;
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+a.PictureTextElement:hover {
+    background:rgb(66, 130, 130);
+}
+
+div.PictureTextElement_Text {
+    color: white;
+    font-family: Helvetica, sans-serif;
+    font-size: 40px;
+    text-decoration: none;
+    text-align: center;
+
+    position: absolute;
+    padding: 128px;
+
+    display: inline;
+}
+
+div.PictureTextElement_Image {
+    display: inline;
 }
 
 div#Footer {
     background: black;
-    padding: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     margin: 0px;
     width: 100%;
     display: block;
