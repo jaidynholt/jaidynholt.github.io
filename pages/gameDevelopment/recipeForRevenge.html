@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <title>Recipe for Revenge | Jaidyn Holt Portfolio</title>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../../src/index.js"></script>
+    <script src="../../src/imageGallery.js"></script>
+    <body onload="LoadImageGallery('recipeForRevengeGallery')">
+        <nav id="navBar">
+            <a class="logo" href="../index.html" target="_self">JAIDYN HOLT</a>
+            <a href="../contact.html" target="_self">Contact</a>
+            <a href="../about.html" target="_self">About</a>
+            <a href="../work.html" target="_self">Work</a>
+            <a href="../index.html" target="_self">Home</a>
+        </nav>
+        <div id="minArea">
+            <div class="section darkGray">
+                <div class="sectionText">
+                    <h1>Recipe for Revenge</h1>
+                    <h2>2022</h2><br>
+                    <p>
+                        Recipe for Revenge is a 2D pixel art adventure platformer game made with Unity.
+                        I created all original art assets, animations, and game design and level design.
+                    </p>
+                </div>
+            </div>
+            <div class="videoBanner">
+                <video width="70%" height="100%"  controls autoplay muted loop>
+                    <source src="../../images/RecipeForRevenge/rfr_gameplay_short.mp4" type="video/mp4">
+                    Your browser does not support the embedded video.
+                </video>
+            </div>
+            <div class="columnContainer">
+                <div class="column darkGray">
+                    <div class="sectionText">
+                        <h2>About</h2><br>
+                        <p>
+                            Phoebe Gold, the chef at her restaurant "Golden Galley", has just learned the infamous
+                            food critic Stella Parks is here, the very same critic who ruined her dad's restaurant
+                            with a poor review, so Phoebe has something to prove. However, the food has chosen
+                            this moment to revolt and now she must save the restaurant and deliver the perfect
+                            dish at the same time.
+                        </p>
+                    </div>
+                </div>
+                <div class="column darkGray">
+                    <div class="sectionText">
+                        <h2>Play the Game</h2><br>
+                        <p>More feature details on the Itch.io page!</p>
+                        <p>Itch.io page:</p>
+                        <iframe frameborder="0"
+                        src="https://itch.io/embed/2547678?linkback=true&amp;border_width=2&amp;bg_color=6B6E70&amp;fg_color=fff&amp;link_color=1ea5a0&amp;border_color=32e0da"
+                        width="554" height="169">
+                            <a href="https://holtj.itch.io/recipe-for-revenge">Recipe For Revenge by HoltJ</a>
+                        </iframe><br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="section midGray">
+                <div class="sectionText centered"><h2>Gameplay Captures</h2></div>
+                <div id="recipeForRevengeGallery" class="imageGallery">
+                    <div class="imageSlide">
+                        <a class="prevArrow" onclick="IncrementSlides('recipeForRevengeGallery', -1)">&#10094;</a>
+                        <img src="../../images/RecipeForRevenge/rfr_1.png" alt="Gameplay image" width="90%">
+                        <a class="nextArrow" onclick="IncrementSlides('recipeForRevengeGallery', 1)">&#10095;</a>
+                    </div>
+
+                    <!-- Thumbnail images: populated dynamically -->
+                    <div class="thumbnailGrid"></div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <a href="mailto: jaidynholt2587@gmail.com" target="_blank">
+                <div class="iconButton">
+                    <img class="icon" src="../../assets/emailIcon.svg" alt="email link" />
+                </div>
+            </a>
+            <a href="https://linkedin.com/in/jaidyn-holt-b44693271" target="_blank">
+                <div class="iconButton">
+                    <img class="icon" src="../../assets/linkedinIcon.svg" alt="LinkedIn link" />
+                </div>
+            </a>
+        </footer>
+    </body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <title>Jaidyn Holt Portfolio</title>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" href="style.css">
+    <script src="../src/index.js"></script>
+    <body>
+        <nav id="navBar">
+            <a class="logo" href="index.html" target="_self">JAIDYN HOLT</a>
+            <a href="contact.html" target="_self">Contact</a>
+            <a href="about.html" target="_self">About</a>
+            <a href="work.html" target="_self">Work</a>
+            <a class="current" href="index.html" target="_self">Home</a>
+        </nav>
+        <div id="minArea">
+            <div id="banner">
+                <div class="bannerText">
+                    <h2>Hello! I'm</h2>
+                    <h1>Jaidyn Holt</h1>
+                    <br> <hr> <br>
+                    <p>A passionate, imaginative, and dependable creator
+                        dedicated to engaging storytelling through a creative combination
+                        of art and technology with an interest in the fields of
+                        game development and interactive media.
+                    </p>
+                </div>
+                
+            </div>
+            <div class="section midGray">
+                <h1>Featured Projects</h1>
+                <div class="projectGrid">
+                    <div id="projectBox1" class="projectBox"
+                    onmouseenter="ExpandProjectBox('projectBox1')" onmouseleave="CollapseProjectBox('projectBox1')"
+                    onclick="NavigationButton('gameDevelopment/subjectN06.html')">
+                        <h1>Subject N.06</h1>
+                        <p>
+                            A 2D puzzle adventure game made with Unity in which the lab rat N.06 must use his
+                            newfound intelligence to escape.
+                        </p>
+                    </div>
+                    <div id="projectBox2" class="projectBox"
+                    onmouseenter="ExpandProjectBox('projectBox2')" onmouseleave="CollapseProjectBox('projectBox2')"
+                    onclick="NavigationButton('software/scootez.html')">
+                        <h1>ScootEZ</h1>
+                        <p>
+                            A MERN stack electric scooter rental website application developed
+                            in a team of four over four weeks.
+                        </p>
+                    </div>
+                    <div id="projectBox3" class="projectBox"
+                    onmouseenter="ExpandProjectBox('projectBox3')" onmouseleave="CollapseProjectBox('projectBox3')"
+                    onclick="NavigationButton('gameDevelopment/solarSystemsDown.html')">
+                        <h1>Solar Systems Down</h1>
+                        <p>
+                            A 2D pixel art adventure shooter made with Unity for the 2024 FIEA Game Jam
+                            in which you play as the nomadic solar systems engineer Sol, living in a post-apocalytic,
+                            solar-punk world and fighting evil sludge.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <a href="mailto: jaidynholt2587@gmail.com" target="_blank">
+                <div class="iconButton">
+                    <img class="icon" src="../assets/emailIcon.svg" alt="email link" />
+                </div>
+            </a>
+            <a href="https://linkedin.com/in/jaidyn-holt-b44693271" target="_blank">
+                <div class="iconButton">
+                    <img class="icon" src="../assets/linkedinIcon.svg" alt="LinkedIn link" />
+                </div>
+            </a>
+        </footer>
+    </body>
+
+</html>

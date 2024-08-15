@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <title>Minesweeper | Jaidyn Holt Portfolio</title>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../../src/index.js"></script>
+    <script src="../../src/imageGallery.js"></script>
+    <body onload="LoadImageGallery('minesweeperGallery')">
+        <nav id="navBar">
+            <a class="logo" href="../index.html" target="_self">JAIDYN HOLT</a>
+            <a href="../contact.html" target="_self">Contact</a>
+            <a href="../about.html" target="_self">About</a>
+            <a href="../work.html" target="_self">Work</a>
+            <a href="../index.html" target="_self">Home</a>
+        </nav>
+        <div id="minArea">
+            <div class="section darkGray">
+                <div class="sectionText">
+                    <h1>Minesweeper</h1>
+                    <h2>2023</h2><br>
+                    <p>
+                        I coded Minesweeper in C++ with a graphical interface using the Simple and
+                        Fast Multimedia Library (SFML)
+                        (<a href="https://www.sfml-dev.org/" target="_blank" class="textLink">https://www.sfml-dev.org/</a>).
+                        The image files for the game were given.
+                    </p>
+                </div>
+            </div>
+            <div class="videoBanner">
+                <video width="70%" height="100%"  controls autoplay muted loop>
+                    <source src="../../images/Minesweeper/ms_gameplay.mp4" type="video/mp4">
+                    Your browser does not support the embedded video.
+                </video>
+            </div>
+            <div class="section darkGray">
+                <div class="sectionText">
+                    <h2>About</h2><br>
+                    <p>
+                        The goal of Minesweeper (originally published 1990 as a part of Windows) is
+                        to reveal all the empty cells in the grid without revealing a mine.
+                        You can flag cells if you know they are mines as a strategy. Additionally,
+                        in my version I implemented a timer (along with a pause button),
+                        debug button (which shows all the mines for testing purposes) and leaderboard.
+                    </p>
+                </div>
+            </div>
+            <div class="section midGray">
+                <div class="sectionText centered"><h2>Gameplay Captures</h2></div>
+                <div id="minesweeperGallery" class="imageGallery">
+                    <div class="imageSlide">
+                        <a class="prevArrow" onclick="IncrementSlides('minesweeperGallery', -1)">&#10094;</a>
+                        <img src="../../images/Minesweeper/ms_1.jpg" alt="Gameplay image" width="90%">
+                        <a class="nextArrow" onclick="IncrementSlides('minesweeperGallery', 1)">&#10095;</a>
+                    </div>
+
+                    <!-- Thumbnail images: populated dynamically -->
+                    <div class="thumbnailGrid"></div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <a href="mailto: jaidynholt2587@gmail.com" target="_blank">
+                <div class="iconButton">
+                    <img class="icon" src="../../assets/emailIcon.svg" alt="email link" />
+                </div>
+            </a>
+            <a href="https://linkedin.com/in/jaidyn-holt-b44693271" target="_blank">
+                <div class="iconButton">
+                    <img class="icon" src="../../assets/linkedinIcon.svg" alt="LinkedIn link" />
+                </div>
+            </a>
+        </footer>
+    </body>
+
+</html>

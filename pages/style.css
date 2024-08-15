@@ -1,0 +1,560 @@
+/*========================GLOBAL STYLE VARIABLES========================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish');
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    --dark: #222629;
+    --mid: #474B4F;
+    --light: #6B6E70;
+    
+    --bright-blue: #32e0da;
+    --mid-blue: #1ea5a0;
+
+    --bodyFontFamily: 'Mulish', sans-serif;
+    --bodyFontWeight: 100;
+
+    --headerFontFamily: 'Mulish', sans-serif; 
+    --headerFontWeight: 500;
+
+}
+
+/*============================NAV BAR VARIABLES========================*/
+
+/* The nav bar */
+nav {
+  background-color: var(--dark);
+  padding: 0px 50px;  /* top, right, bottom, left */
+
+  width: 100vw;
+  height: 10vh;
+
+  position: fixed;
+  z-index: 10;
+}
+
+/* The links inside the nav bar */
+nav a {
+  float: right;
+  padding: 30px 20px;  /* top, right, bottom, left */
+
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: var(--headerFontFamily);
+  font-weight: var(--headerFontWeight);
+}
+
+/* The logo should float left, the rest of the links are on the right of nav bar */
+nav a.logo {
+    float: left;
+}
+
+/* The nav bar links on hover */
+nav a:hover {
+  color: var(--mid-blue);
+}
+
+/* The active nav bar link (being pressed) */
+nav a:active {
+    color: var(--bright-blue);
+}
+
+/* The current link */
+nav a.current {
+    color: var(--mid-blue);
+}
+nav a.current:active {
+    color: var(--bright-blue);
+}
+
+.hasShadow {
+    box-shadow: rgba(18, 20, 22, 0.669) 0px 2px 7px 0px;
+}
+
+/*============================FOOTER VARIABLES========================*/
+
+/* The footer */
+footer {
+    background-color: var(--dark);
+    overflow: hidden;
+    padding: 0px 50px;  /* top, right, bottom, left */
+    height: 10vh;
+}
+
+/* The links inside the footer */
+footer a {
+    float: right;
+    padding: 30px 20px;  /* top, right, bottom, left */
+
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: var(--headerFontFamily);
+    font-weight: var(--headerFontWeight);
+}
+
+/* The links inside the footer */
+footer a:hover {
+    color: var(--mid-blue);
+}
+
+/* The iconButton links on hover */
+footer a:hover > div.iconButton {
+    background-color: var(--mid-blue);
+}
+
+/* The active footer link (being pressed) */
+footer a:active {
+    color: var(--bright-blue);
+}
+
+/* The iconButton links active (being pressed) */
+footer a:active  > div.iconButton {
+    color: var(--bright-blue);
+}
+
+/* The circle div that surrounds the icon img */
+.iconButton {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+    background-color: white;
+}
+
+/* The icon img inside the iconButton divs */
+.icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 7px;
+    height: 72%;
+}
+
+/*============================TEXT FORMATTING VARIABLES========================*/
+
+.textLink {
+    color: var(--bright-blue);
+    font-family: var(--bodyFontFamily);
+    font-weight: var(--bodyFontWeight);
+    font-size: 18px;
+    text-decoration: none;
+}
+.textLink:hover {
+    color: var(--mid-blue);
+}
+.textLink:active {
+    color: var(--bright-blue);
+}
+
+/*===============================BODY VARIABLES========================*/
+
+#minArea {
+    padding-top: 10vh;
+    min-height: 90vh;
+    background-color: var(--dark);
+}
+
+/*===============================BANNER VARIABLES========================*/
+
+#banner {
+    height: 400px;
+    padding: 50px 50px;  /* top, right, bottom, left */
+
+    background-color: var(--dark);
+}
+
+.bannerText {
+    width: 40%;
+
+    color: white;
+    font-family: var(--headerFontFamily);
+    font-weight: var(--headerFontWeight);
+}
+
+.bannerText h1 {
+    font-size: 48px;
+}
+
+.bannerText h2 {
+    font-size: 28px;
+}
+
+.bannerText p {
+    font-size: 18px;
+}
+
+.bannerText hr {
+    border: 1px solid var(--mid-blue);
+}
+
+/*===============================SECTION VARIABLES========================*/
+
+.section {
+    padding: 50px 50px;
+    background-color: var(--mid);
+}
+.section.midGray {
+    background-color: var(--mid);
+}
+.section.darkGray {
+    background-color: var(--dark);
+}
+.section.black {
+    background-color: black;
+}
+.section h1 {
+    color: white;
+    font-family: var(--headerFontFamily);
+    font-weight: var(--headerFontWeight);
+    font-size: 22px;
+
+    padding: 0px 0px 25px 0px;
+}
+.section h2 {
+    color: white;
+    font-family: var(--headerFontFamily);
+    font-weight: var(--headerFontWeight);
+    font-size: 20px;
+
+    padding: 0px 0px 8px 0px;
+}
+.section p {
+    color: white;
+    font-family: var(--bodyFontFamily);
+    font-weight: var(--bodyFontWeight);
+    font-size: 18px;
+
+    padding: 0px 0px 40px 0px;
+}
+
+/*=====================================COLUMN VARIABLES========================*/
+
+.columnContainer {
+    display: flex;
+    justify-content: space-evenly;
+}
+.column {
+    display: inline-block;
+    width: 50vw;
+    min-height: 600px;
+    padding: 50px;
+    margin: auto;
+}
+.column2.smaller {
+    display: inline-block;
+    width: 30vw;
+    padding: 50px;
+    margin: auto;
+}
+.column.larger {
+    display: inline-block;
+    width: 70vw;
+    padding: 50px;
+    margin: auto;
+}
+.column.darkGray {
+    background-color: var(--dark);
+}
+.column.midGray {
+    background-color: var(--mid);
+}
+.sectionText {
+    width: 80%;
+    margin: auto;
+}
+.sectionText.centered {
+    text-align: center;
+    margin: auto;
+    padding: 50px 0px;
+}
+.sectionText h1 {
+    color: white;
+    font-family: var(--headerFontFamily);
+    font-weight: var(--headerFontWeight);
+    font-size: 36px;
+
+    padding: 0px 0px 25px 0px;
+}
+.sectionText h2 {
+    color: white;
+    font-family: var(--headerFontFamily);
+    font-weight: var(--headerFontWeight);
+    font-size: 24px;
+
+    padding: 0px 0px 8px 0px;
+}
+.sectionText p {
+    color: white;
+    font-family: var(--bodyFontFamily);
+    font-weight: var(--bodyFontWeight);
+    font-size: 18px;
+
+    padding: 0px 0px 18px 0px;
+}
+
+/*===============================PROJECT GRID VARIABLES========================*/
+
+.projectGrid {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*===============================PROJECT BOX 1 VARIABLES========================*/
+
+.projectBox {
+    width: 30%;
+    height: 300px;
+    padding: 20px;
+
+    border: 2px solid var(--light);
+    border-radius: 10px;
+
+    transition: all .2s ease-in-out;
+    transform: scale(1.0);
+}
+
+.projectBox h1{
+    color: white;
+    font-family: var(--headerFontFamily);
+    font-weight: var(--headerFontWeight);
+
+    /* transition the font size from small to large on hover */
+    font-size: 20px;
+    transition: font-size .2s;
+}
+.projectBox p {
+    color: white;
+    font-family: var(--headerFontFamily);
+    font-weight: var(--headerFontWeight);
+    font-size: 16px;
+
+    /* transition the opacity from none to full on hover */
+    opacity: 0;
+    transition: opacity .2s;
+}
+
+.projectBox.expanded {
+    cursor: pointer;
+    border: 2px solid var(--mid-blue);
+    transform: scale(1.1);
+
+    /* Darken the background image on hover */
+    background-color: rgba(0, 0, 0, 0.7);
+    background-blend-mode: darken;
+}
+.projectBox.expanded h1 {
+    font-size: 36px;
+}
+.projectBox p.revealed {
+    opacity: 1;
+}
+
+/*===============================PROJECT BOX 2 VARIABLES========================*/
+
+.projectBox2 {
+    width: 49%;
+    height: 300px;
+    padding: 20px;
+
+    border: 2px solid var(--light);
+    border-radius: 10px;
+
+    transition: all .2s ease-in-out;
+    transform: scale(1.0);
+}
+
+.projectBox2 h1{
+    color: white;
+    font-family: var(--headerFontFamily);
+    font-weight: var(--headerFontWeight);
+
+    /* transition the font size from small to large on hover */
+    font-size: 20px;
+    transition: font-size .2s;
+}
+.projectBox2 p {
+    color: white;
+    font-family: var(--headerFontFamily);
+    font-weight: var(--headerFontWeight);
+    font-size: 16px;
+
+    /* transition the opacity from none to full on hover */
+    opacity: 0;
+    transition: opacity .2s;
+}
+
+.projectBox2.expanded {
+    cursor: pointer;
+    border: 2px solid var(--mid-blue);
+    transform: scale(1.05);
+
+    /* Darken the background image on hover */
+    background-color: rgba(0, 0, 0, 0.7);
+    background-blend-mode: darken;
+}
+.projectBox2.expanded h1 {
+    font-size: 36px;
+}
+.projectBox2 p.revealed {
+    opacity: 1;
+}
+
+/*===============================PROJECT BOX 3 VARIABLES========================*/
+
+.projectBox3 {
+    width: 30%;
+    height: 160px;
+    padding: 20px;
+
+    border: 2px solid var(--light);
+    border-radius: 10px;
+
+    background-color: var(--light);
+    text-align: center;
+
+    transition: all .2s ease-in-out;
+    transform: scale(1.0);
+}
+.projectBox3.longer {
+    width: 100%;
+    height: 130px;
+}
+
+.projectBox3 h1{
+    color: white;
+    font-family: var(--headerFontFamily);
+    font-weight: var(--headerFontWeight);
+
+    /* transition the font size from small to large on hover */
+    font-size: 24px;
+    padding: 0px;
+    transition: font-size .2s;
+}
+
+.projectBox3.expanded {
+    cursor: pointer;
+    border: 2px solid var(--mid-blue);
+    transform: scale(1.1);
+
+    /* Darken the background image on hover */
+    background-color: var(--mid);
+}
+.projectBox3.expanded h1 {
+    color: white;
+    font-size: 28px;
+}
+
+/*===============================PROJECT BOX ID VARIABLES========================*/
+#projectBox1 {
+    background-image: url("../images/SubjectN06/sn06_10.png");
+    background-repeat: no-repeat;
+    background-position: center; /* Center the image */
+    background-size: cover; /* Resize the background image to cover the entire box */
+}
+#projectBox2 {
+    background-image: url("../images/scootez_1.png");
+    background-repeat: no-repeat;
+    background-position: right; /* Center the image */
+    background-size: cover; /* Resize the background image to cover the entire box */
+}
+#projectBox3 {
+    background-image: url("../images/SolarSystemsDown/ssd_image2.png");
+    background-repeat: no-repeat;
+    background-position: bottom; /* Center the image */
+    background-size: cover; /* Resize the background image to cover the entire box */
+}
+#projectBox4 {
+    background-image: url("../images/RecipeForRevenge/rfr_1.png");
+    background-repeat: no-repeat;
+    background-position: bottom; /* Center the image */
+    background-size: cover; /* Resize the background image to cover the entire box */
+}
+#projectBox5 {
+    background-image: url("../images/Minesweeper/ms_3.jpg");
+    background-repeat: no-repeat;
+    background-position: center; /* Center the image */
+    background-size: cover; /* Resize the background image to cover the entire box */
+}
+
+/*===============================VIDEO BANNER VARIABLES========================*/
+
+.videoBanner {
+    text-align: center;
+    background-color: black;
+
+    height: 50vh;
+}
+
+/*===============================IMAGE GALLERY VARIABLES========================*/
+
+/* Image Gallery container */
+.imageGallery {
+    padding: 0px 100px;
+    height: auto;
+    width: 100%;
+
+    text-align: center;
+}
+
+.imageSlide {
+    display: inline-block;
+    max-height: 75vh;
+}
+
+.thumbnailGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.thumbnail {
+    width: 100%;
+}
+.thumbnail img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.thumbnail.current {
+    border: 2px solid var(--mid-blue);
+}
+.thumbnail.hover {
+    cursor: pointer;
+    border: 2px solid var(--mid-blue);
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursorPointer {
+    cursor: pointer;
+}
+
+
+.prevArrow, .nextArrow {
+    position: relative;
+    bottom: 250px;
+    z-index: 2;
+
+    color: white;
+    font-size: 48px;
+}
+.prevArrow {
+    right: 10px;
+}
+.nextArrow {
+    left: 10px;
+}
+.prevArrow:hover, .nextArrow:hover {
+    color: var(--mid-blue);
+    cursor: pointer;
+}
+.prevArrow:active, .nextArrow:active {
+    color: var(--bright-blue);
+    cursor: pointer;
+}

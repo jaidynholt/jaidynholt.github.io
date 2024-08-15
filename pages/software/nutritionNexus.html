@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <title>Nutrition Nexus | Jaidyn Holt Portfolio</title>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" href="../style.css">
+    <script src=""></script>
+    <body>
+        <nav id="navBar">
+            <a class="logo" href="../index.html" target="_self">JAIDYN HOLT</a>
+            <a href="../contact.html" target="_self">Contact</a>
+            <a href="../about.html" target="_self">About</a>
+            <a href="../work.html" target="_self">Work</a>
+            <a href="../index.html" target="_self">Home</a>
+        </nav>
+        <div id="minArea">
+            <div class="section darkGray">
+                <div class="sectionText">
+                    <h1>Nutrition Nexus</h1>
+                    <h2>2024</h2><br>
+                    <p>
+                        The Nutrition Nexus is a <a class="textLink" href="https://react.dev/" target="_blank">React.js</a> project created in a team of three
+                        for COP3530 Data Structures and Algorithms. The program is a web-based <a class="textLink" href="https://nextjs.org/" target="_blank">Next.js</a> program
+                        bootstrapped with 'create-next-app', written in javascript,
+                        javascript XML (the React extension to javascript allowing HTML), and CSS.
+                        Additionally it uses 'next/font' to automatically optimize and load 
+                        a custom Google font Inter.
+                    </p>
+                    <p>
+                        Nutrition Nexus finds the most compatible recipes for a person
+                        or multiple people according to their preferences, diets, and allergie.
+                        It is often difficult to find food that is within the restrictions of a certain diet,
+                        especially if you are trying to eat or cook with other people.
+                        People also have different levels of dietary restriction to account for.
+                        This program aims to help with this!
+                    </p>
+                    <p>
+                        The project supports the creation and editing of multiple profiles,
+                        each with a custom name and food preferences associated as well as diet
+                        and health options which can be individually custom rated on a scale from
+                        0 to 5 depending on the user's degree of strictness. For example, if the
+                        user rates peanut-free as 5, they are strictly peanut free, suggesting
+                        a severe peanut allergy.
+                        The program uses the <a class="textLink" href="https://developer.edamam.com/edamam-recipe-api" target="_blank">Edamam Recipe Search API</a>
+                        for the recipe database. Upon generating results, the API handles
+                        fetching recipes from its database that meet all the profiles' food preferences.
+                        A rating is calculated for each of these recipes according to the
+                        combined profiles' diet and health rankings. In addition, the user can specify
+                        whether more or less calories and ingredients
+                        should be given weight, and this will also affect the recipes' ratings.
+                        Finally, heapsort and mergesort are applied to sort the recipes by their rating,
+                        and the sorted recipes are displayed in this order, by most compatible
+                        recipes for all profiles.
+                    </p>
+                    <p>
+                        See the complete project on GitHub:<br>
+                        <a class="textLink" href="https://github.com/pinkTogreen/DSA-P3" target="_blank">
+                            https://github.com/pinkTogreen/DSA-P3
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <a href="mailto: jaidynholt2587@gmail.com" target="_blank">
+                <div class="iconButton">
+                    <img class="icon" src="../../assets/emailIcon.svg" alt="email link" />
+                </div>
+            </a>
+            <a href="https://linkedin.com/in/jaidyn-holt-b44693271" target="_blank">
+                <div class="iconButton">
+                    <img class="icon" src="../../assets/linkedinIcon.svg" alt="LinkedIn link" />
+                </div>
+            </a>
+        </footer>
+    </body>
+
+</html>
