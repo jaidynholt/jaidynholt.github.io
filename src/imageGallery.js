@@ -68,6 +68,52 @@ const galleries = {
             "../../images/Minesweeper/ms_7.jpg",
             "../../images/Minesweeper/ms_8.jpg"
         ]
+    },
+    "modeling3DGallery": {
+        index: 0,
+        images: [
+            "../../images/Artwork/TapeDispenser_1.png",
+            "../../images/Artwork/TapeDispenser_2.png",
+            "../../images/Artwork/TapeDispenser_3.png",
+            "../../images/Artwork/TapeDispenser_4.png",
+            "../../images/Artwork/TapeDispenser_5.png"
+        ]
+    },
+    "illustrationsGallery": {
+        index: 0,
+        images: [
+            "../../images/Artwork/artwork_1.jpg",
+            "../../images/Artwork/artwork_2.jpg",
+            "../../images/Artwork/artwork_3.jpg",
+            "../../images/Artwork/artwork_4.jpg",
+            "../../images/Artwork/artwork_5.jpg",
+            "../../images/Artwork/artwork_6.jpg"
+        ]
+    },
+    "socialMediaGallery": {
+        index: 0,
+        images: [
+            "../../images/SocialPosts/bmp_1.jpg",
+            "../../images/SocialPosts/bmp_2.jpg",
+            "../../images/SocialPosts/bmp_3.jpg",
+            "../../images/SocialPosts/bmp_4.jpg",
+            "../../images/SocialPosts/bmp_5.jpg",
+            "../../images/SocialPosts/bmp_6.jpg",
+            "../../images/SocialPosts/bmp_7.jpg",
+            "../../images/SocialPosts/bmp_8.jpg",
+            "../../images/SocialPosts/bmp_9.jpg",
+            "../../images/SocialPosts/bmp_10.jpg",
+            "../../images/SocialPosts/bmp_11.jpg",
+            "../../images/SocialPosts/bmp_12.jpg",
+            "../../images/SocialPosts/bmp_13.jpg",
+            "../../images/SocialPosts/bmp_14.jpg",
+            "../../images/SocialPosts/bmp_15.jpg",
+            "../../images/SocialPosts/bmp_16.jpg",
+            "../../images/SocialPosts/bmp_17.jpg",
+            "../../images/SocialPosts/bmp_18.jpg",
+            "../../images/SocialPosts/bmp_19.jpg",
+            "../../images/SocialPosts/bmp_20.jpg"
+        ]
     }
 }
 

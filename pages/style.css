@@ -451,38 +451,6 @@ footer a:active  > div.iconButton {
     font-size: 28px;
 }
 
-/*===============================PROJECT BOX ID VARIABLES========================*/
-#projectBox1 {
-    background-image: url("../images/SubjectN06/sn06_10.png");
-    background-repeat: no-repeat;
-    background-position: center; /* Center the image */
-    background-size: cover; /* Resize the background image to cover the entire box */
-}
-#projectBox2 {
-    background-image: url("../images/scootez_1.png");
-    background-repeat: no-repeat;
-    background-position: right; /* Center the image */
-    background-size: cover; /* Resize the background image to cover the entire box */
-}
-#projectBox3 {
-    background-image: url("../images/SolarSystemsDown/ssd_image2.png");
-    background-repeat: no-repeat;
-    background-position: bottom; /* Center the image */
-    background-size: cover; /* Resize the background image to cover the entire box */
-}
-#projectBox4 {
-    background-image: url("../images/RecipeForRevenge/rfr_1.png");
-    background-repeat: no-repeat;
-    background-position: bottom; /* Center the image */
-    background-size: cover; /* Resize the background image to cover the entire box */
-}
-#projectBox5 {
-    background-image: url("../images/Minesweeper/ms_3.jpg");
-    background-repeat: no-repeat;
-    background-position: center; /* Center the image */
-    background-size: cover; /* Resize the background image to cover the entire box */
-}
-
 /*===============================VIDEO BANNER VARIABLES========================*/
 
 .videoBanner {
@@ -557,4 +525,96 @@ footer a:active  > div.iconButton {
 .prevArrow:active, .nextArrow:active {
     color: var(--bright-blue);
     cursor: pointer;
+}
+
+/*===============================PROJECT BOX ID VARIABLES========================*/
+#projectBox1 {
+    background-image: url("../images/SubjectN06/sn06_10.png");
+    background-repeat: no-repeat;
+    background-position: center; /* Center the image */
+    background-size: cover; /* Resize the background image to cover the entire box */
+}
+#projectBox2 {
+    background-image: url("../images/scootez_1.png");
+    background-repeat: no-repeat;
+    background-position: right; /* Center the image */
+    background-size: cover; /* Resize the background image to cover the entire box */
+}
+#projectBox3 {
+    background-image: url("../images/SolarSystemsDown/ssd_image2.png");
+    background-repeat: no-repeat;
+    background-position: bottom; /* Center the image */
+    background-size: cover; /* Resize the background image to cover the entire box */
+}
+#projectBox4 {
+    background-image: url("../images/RecipeForRevenge/rfr_1.png");
+    background-repeat: no-repeat;
+    background-position: bottom; /* Center the image */
+    background-size: cover; /* Resize the background image to cover the entire box */
+}
+#projectBox5 {
+    background-image: url("../images/Minesweeper/ms_3.jpg");
+    background-repeat: no-repeat;
+    background-position: center; /* Center the image */
+    background-size: cover; /* Resize the background image to cover the entire box */
+}
+#projectBox6 {
+    background-image: url("../images/CampusCompanion_1.png");
+    background-repeat: no-repeat;
+    background-position: center; /* Center the image */
+    background-size: cover; /* Resize the background image to cover the entire box */
+}
+#projectBox7 {
+    background-image: url("../images/PlantFoodScreenshot.png");
+    background-repeat: no-repeat;
+    background-position: center; /* Center the image */
+    background-size: cover; /* Resize the background image to cover the entire box */
+}
+#projectBox8 {
+    background-image: url("../images/NormanFinalFilmScreenshot.png");
+    background-repeat: no-repeat;
+    background-position: center; /* Center the image */
+    background-size: cover; /* Resize the background image to cover the entire box */
+}
+#projectBox9 {
+    background-image: url("../images/QBert_1.png");
+    background-repeat: no-repeat;
+    background-position: center; /* Center the image */
+    background-size: cover; /* Resize the background image to cover the entire box */
+}
+#projectBox10 {
+    background-image: url("../images/DeathStarMotionGraphic_1.png");
+    background-repeat: no-repeat;
+    background-position: center; /* Center the image */
+    background-size: cover; /* Resize the background image to cover the entire box */
+}
+#projectBox11 {
+    background-image: url("../images/Artwork/TapeDispenser_1.png");
+    background-repeat: no-repeat;
+    background-position: center; /* Center the image */
+    background-size: cover; /* Resize the background image to cover the entire box */
+}
+#projectBox12 {
+    background-image: url("../images/Artwork/artwork_3.jpg");
+    background-repeat: no-repeat;
+    background-position: center; /* Center the image */
+    background-size: cover; /* Resize the background image to cover the entire box */
+}
+#projectBox13 {
+    background-image: url("../images/SocialPosts/bmp_2.jpg");
+    background-repeat: no-repeat;
+    background-position: center; /* Center the image */
+    background-size: cover; /* Resize the background image to cover the entire box */
+}
+#projectBox14 {
+    background-image: url("../images/Artwork/Enchanted_forest_art_4.jpg");
+    background-repeat: no-repeat;
+    background-position: center; /* Center the image */
+    background-size: cover; /* Resize the background image to cover the entire box */
+}
+#projectBox15 {
+    background-image: url("../images/NutritionNexus_1.png");
+    background-repeat: no-repeat;
+    background-position: top; /* Center the image */
+    background-size: cover; /* Resize the background image to cover the entire box */
 }

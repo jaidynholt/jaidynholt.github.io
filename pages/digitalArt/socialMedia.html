@@ -4,8 +4,9 @@
     <title>Social Media Graphics | Jaidyn Holt Portfolio</title>
     <meta name="viewport" content="width = device-width, initial-scale = 1">
     <link rel="stylesheet" href="../style.css">
-    <script src=""></script>
-    <body>
+    <script src="../../src/index.js"></script>
+    <script src="../../src/imageGallery.js"></script>
+    <body onload="LoadImageGallery('socialMediaGallery')">
         <nav id="navBar">
             <a class="logo" href="../index.html" target="_self">JAIDYN HOLT</a>
             <a href="../contact.html" target="_self">Contact</a>
@@ -28,14 +29,22 @@
                         See the instagram page:
                         <a class="textLink" href="https://www.instagram.com/badasmentors/" target="_blank">@badasmentors</a>
                     </p>
-                    <p>
-                        Images coming soon
-                    </p>
+                </div>
+                <div id="socialMediaGallery" class="imageGallery">
+                    <div class="imageSlide">
+                        <a class="prevArrow" onclick="IncrementSlides('socialMediaGallery', -1)">&#10094;</a>
+                        <img src="../../images/SocialPosts/bmp_1.jpg" alt="image" width="60%">
+                        <a class="nextArrow" onclick="IncrementSlides('socialMediaGallery', 1)">&#10095;</a>
+                    </div>
+
+                    <!-- Thumbnail images: populated dynamically -->
+                    <div class="thumbnailGrid"></div>
                 </div>
             </div>
+            
         </div>
         <footer>
-            <a href="mailto: jaidynholt2587@gmail.com" target="_blank">
+            <a href="mailto: jaidyn.h.holt@gmail.com" target="_blank">
                 <div class="iconButton">
                     <img class="icon" src="../../assets/emailIcon.svg" alt="email link" />
                 </div>
