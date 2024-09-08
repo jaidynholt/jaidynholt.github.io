@@ -5,6 +5,7 @@
 *, *::before, *::after {
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
     box-sizing: border-box;
 
     --dark: #222629;
@@ -22,54 +23,85 @@
 
 }
 
+/*================================BODY================================*/
+
+body {
+    margin: unset;
+}
+
 /*============================NAV BAR VARIABLES========================*/
 
 /* The nav bar */
-nav {
-  background-color: var(--dark);
-  padding: 0px 50px;  /* top, right, bottom, left */
+.navBar {
+    width: 100vw;
+    position: fixed;
+    z-index: 10;
 
-  width: 100vw;
-  height: 10vh;
+    background-color: var(--dark);
 
-  position: fixed;
-  z-index: 10;
+    color: white;
+    font-size: 18px;
+    font-family: var(--headerFontFamily);
+    font-weight: var(--headerFontWeight);
 }
 
-/* The links inside the nav bar */
-nav a {
-  float: right;
-  padding: 30px 20px;  /* top, right, bottom, left */
+.navBar ul {
+    margin: unset;
+    padding: unset;
+    display: flex;
+    justify-content: flex-end;
 
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  font-size: 18px;
-  font-family: var(--headerFontFamily);
-  font-weight: var(--headerFontWeight);
+    list-style: none; /*Gets rid of the bullet points */
 }
-
+.navBar li {
+    padding: 2em; /*1em is one line height */
+}
 /* The logo should float left, the rest of the links are on the right of nav bar */
-nav a.logo {
-    float: left;
+.navBar li.logo {
+    margin-right: auto;
 }
 
+.navBar a {
+    color: inherit;
+    text-decoration: none; /*Gets rid of the underline */
+}
 /* The nav bar links on hover */
-nav a:hover {
-  color: var(--mid-blue);
-}
-
-/* The active nav bar link (being pressed) */
-nav a:active {
-    color: var(--bright-blue);
-}
-
-/* The current link */
-nav a.current {
+.navBar a:hover {
     color: var(--mid-blue);
 }
-nav a.current:active {
+/* The active nav bar link (being pressed) */
+.navBar a:active {
     color: var(--bright-blue);
+}
+/* The current link */
+.navBar a.current {
+    color: var(--mid-blue);
+}
+.navBar a.current:active {
+    color: var(--bright-blue);
+}
+
+.navBar .navBarToggle {
+    display: flex;
+}
+/* The hamburger button */
+.navBar .navBarMenuButton {
+    position: absolute;
+    top: 2em;
+    right: 2em;
+
+    display: none;
+
+    border: unset;
+    background: unset;
+
+    cursor: pointer;
+}
+.navBar .navBarMenuButton svg {
+    stroke: white;
+}
+.navBar .navBarMenuButton .menuIconClose {
+    display: none;
 }
 
 .hasShadow {
@@ -137,6 +169,30 @@ footer a:active  > div.iconButton {
     height: 72%;
 }
 
+/*=================================SCROLLBAR VARIABLES========================*/
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-button {
+    display: none;
+}
+  
+::-webkit-scrollbar-track {
+    background: var(--dark);
+}
+  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--mid);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--light);
+}
+::-webkit-scrollbar-thumb:active {
+    background: var(--bright-blue);
+}
+
 /*============================TEXT FORMATTING VARIABLES========================*/
 
 .textLink {
@@ -155,6 +211,10 @@ footer a:active  > div.iconButton {
 
 /*===============================BODY VARIABLES========================*/
 
+body {
+    margin: 0;
+    background-color: var(--dark);
+}
 #minArea {
     padding-top: 10vh;
     min-height: 90vh;
@@ -617,4 +677,37 @@ footer a:active  > div.iconButton {
     background-repeat: no-repeat;
     background-position: top; /* Center the image */
     background-size: cover; /* Resize the background image to cover the entire box */
+}
+
+
+/*===============================HANDLE DIFFERENT SCREEN SIZES========================*/
+
+/* Detect when screen size is at a smaller width (for resized windows and mobile */
+@media only screen and (max-width: 760px) {
+    /* if screen is small, show button, hide links */
+    .navBar .navBarMenuButton {
+        display: block;
+    }
+    .navBar .navBarToggle {
+        display: none;
+    }
+
+    /* if screen is small AND nav bar is opened, display vertical links */
+    .navBar.open ul {
+        display: block
+    }
+    .navBar.open .navBarToggle {
+        display: block;
+    }
+    .navBar.open a {
+        display: block;
+    }
+    /* hide the hamburger icon */
+    .navBar.open .navBarMenuButton .menuIconOpen {
+        display: none;
+    }
+    /* show the close icon */
+    .navBar.open .navBarMenuButton .menuIconClose {
+        display: block;
+    }
 }

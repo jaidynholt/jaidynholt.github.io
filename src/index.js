@@ -1,3 +1,13 @@
+function ToggleNavBar() {
+    const navbar = document.getElementById("navBar")
+    if (!navbar.classList.contains("open")) {
+        navbar.classList.add("open");
+    }
+    else {
+        navbar.classList.remove("open");
+    }
+}
+
 function ExpandProjectBox(id) {
     const projectBox = document.getElementById(id);
     projectBox.classList.add("expanded");
