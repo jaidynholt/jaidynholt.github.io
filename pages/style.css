@@ -465,6 +465,7 @@ footer a:active  > div.iconButton {
 
 .videoDiv iframe {
     aspect-ratio: 16/9;
+    min-width: 75%;
     max-height: 90vh;
     max-width: 100%;
     border: none;
@@ -487,7 +488,13 @@ footer a:active  > div.iconButton {
 
 .imageSlide {
     display: inline-block;
-    max-height: 75vh;
+    max-width: 100%;
+    text-align: center;
+}
+.imageSlide img {
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 80vh;
 }
 
 .thumbnailGrid {
@@ -498,6 +505,7 @@ footer a:active  > div.iconButton {
 
 .thumbnail {
     width: 100%;
+    max-height: 80%;
 }
 .thumbnail img {
     max-width: 100%;
@@ -519,18 +527,16 @@ footer a:active  > div.iconButton {
 
 
 .prevArrow, .nextArrow {
-    position: relative;
-    bottom: 25rem;
     z-index: 2;
 
     color: white;
     font-size: 4.8rem;
 }
 .prevArrow {
-    right: 1rem;
+    margin-right: auto;
 }
 .nextArrow {
-    left: 1rem;
+    margin-left: auto;
 }
 .prevArrow:hover, .nextArrow:hover {
     color: var(--mid-blue);
