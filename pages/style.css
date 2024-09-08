@@ -5,7 +5,6 @@
 *, *::before, *::after {
     padding: 0;
     margin: 0;
-    overflow-x: hidden;
     box-sizing: border-box;
 
     --dark: #222629;
@@ -23,10 +22,16 @@
 
 }
 
+html {
+    /* change default font size from 16px to 10px */
+    font-size: 62.5%;
+}
+
 /*================================BODY================================*/
 
 body {
     margin: unset;
+    background-color: var(--dark);
 }
 
 /*============================NAV BAR VARIABLES========================*/
@@ -40,7 +45,7 @@ body {
     background-color: var(--dark);
 
     color: white;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-family: var(--headerFontFamily);
     font-weight: var(--headerFontWeight);
 }
@@ -54,7 +59,7 @@ body {
     list-style: none; /*Gets rid of the bullet points */
 }
 .navBar li {
-    padding: 2em; /*1em is one line height */
+    padding: 2.8rem; /*1em is one line height */
 }
 /* The logo should float left, the rest of the links are on the right of nav bar */
 .navBar li.logo {
@@ -87,8 +92,8 @@ body {
 /* The hamburger button */
 .navBar .navBarMenuButton {
     position: absolute;
-    top: 2em;
-    right: 2em;
+    top: 1.8rem;
+    right: 2.8rem;
 
     display: none;
 
@@ -108,25 +113,55 @@ body {
     box-shadow: rgba(18, 20, 22, 0.669) 0px 2px 7px 0px;
 }
 
+/* Detect when screen size is at a smaller width (for resized windows and mobile */
+@media only screen and (max-width: 760px) {
+    /* if screen is small, show button, hide links */
+    .navBar .navBarMenuButton {
+        display: block;
+    }
+    .navBar .navBarToggle {
+        display: none;
+    }
+
+    /* if screen is small AND nav bar is opened, display vertical links */
+    .navBar.open ul {
+        display: block
+    }
+    .navBar.open .navBarToggle {
+        display: block;
+    }
+    .navBar.open a {
+        display: block;
+    }
+    /* hide the hamburger icon */
+    .navBar.open .navBarMenuButton .menuIconOpen {
+        display: none;
+    }
+    /* show the close icon */
+    .navBar.open .navBarMenuButton .menuIconClose {
+        display: block;
+    }
+}
+
 /*============================FOOTER VARIABLES========================*/
 
 /* The footer */
 footer {
-    background-color: var(--dark);
     overflow: hidden;
-    padding: 0px 50px;  /* top, right, bottom, left */
     height: 10vh;
+
+    background-color: var(--dark);
 }
 
 /* The links inside the footer */
 footer a {
     float: right;
-    padding: 30px 20px;  /* top, right, bottom, left */
+    padding: 1.5em 1.5em;  /* top, right, bottom, left */
 
     color: white;
     text-align: center;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-family: var(--headerFontFamily);
     font-weight: var(--headerFontWeight);
 }
@@ -153,8 +188,8 @@ footer a:active  > div.iconButton {
 
 /* The circle div that surrounds the icon img */
 .iconButton {
-    width: 30px;
-    height: 30px;
+    width: 3rem;
+    height: 3rem;
     border-radius: 50%;
 
     background-color: white;
@@ -165,14 +200,14 @@ footer a:active  > div.iconButton {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 7px;
+    padding-top: 0.7rem;
     height: 72%;
 }
 
 /*=================================SCROLLBAR VARIABLES========================*/
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 1rem;
 }
 ::-webkit-scrollbar-button {
     display: none;
@@ -199,7 +234,7 @@ footer a:active  > div.iconButton {
     color: var(--bright-blue);
     font-family: var(--bodyFontFamily);
     font-weight: var(--bodyFontWeight);
-    font-size: 18px;
+    font-size: 1.8rem;
     text-decoration: none;
 }
 .textLink:hover {
@@ -209,55 +244,144 @@ footer a:active  > div.iconButton {
     color: var(--bright-blue);
 }
 
-/*===============================BODY VARIABLES========================*/
-
-body {
-    margin: 0;
-    background-color: var(--dark);
-}
-#minArea {
-    padding-top: 10vh;
-    min-height: 90vh;
-    background-color: var(--dark);
-}
-
-/*===============================BANNER VARIABLES========================*/
-
-#banner {
-    height: 400px;
-    padding: 50px 50px;  /* top, right, bottom, left */
-
-    background-color: var(--dark);
-}
-
+/* Text for the banner */
 .bannerText {
-    width: 40%;
-
     color: white;
     font-family: var(--headerFontFamily);
     font-weight: var(--headerFontWeight);
 }
-
 .bannerText h1 {
-    font-size: 48px;
+    font-size: 4.8rem;
 }
-
 .bannerText h2 {
-    font-size: 28px;
+    font-size: 2.8rem;
 }
-
 .bannerText p {
-    font-size: 18px;
+    font-size: 1.8rem;
 }
-
 .bannerText hr {
-    border: 1px solid var(--mid-blue);
+    border: 0.1rem solid var(--mid-blue);
 }
 
-/*===============================SECTION VARIABLES========================*/
+/* Text in the small sections */
+.sectionText {
+    color: white;
+    font-family: var(--bodyFontFamily);
+    font-weight: var(--bodyFontWeight);
+}
+.sectionText h1 {
+    font-family: var(--headerFontFamily);
+    font-weight: var(--headerFontWeight);
+    font-size: 22px;
+
+    padding: 0px 0px 25px 0px;
+}
+.sectionText h2 {
+    font-family: var(--headerFontFamily);
+    font-weight: var(--headerFontWeight);
+    font-size: 20px;
+
+    padding: 0px 0px 8px 0px;
+}
+.sectionText p {
+    font-size: 18px;
+
+    padding: 0px 0px 40px 0px;
+}
+
+.sectionText2 {
+    width: 80%;
+    margin: auto;
+}
+.sectionText2.centered {
+    text-align: center;
+    margin: auto;
+    padding: 50px 0px;
+}
+.sectionText2 h1 {
+    color: white;
+    font-family: var(--headerFontFamily);
+    font-weight: var(--headerFontWeight);
+    font-size: 36px;
+
+    padding: 0px 0px 25px 0px;
+}
+.sectionText2 h2 {
+    color: white;
+    font-family: var(--headerFontFamily);
+    font-weight: var(--headerFontWeight);
+    font-size: 24px;
+
+    padding: 0px 0px 8px 0px;
+}
+.sectionText2 p {
+    color: white;
+    font-family: var(--bodyFontFamily);
+    font-weight: var(--bodyFontWeight);
+    font-size: 18px;
+
+    padding: 0px 0px 18px 0px;
+}
+
+/*===========================LARGE SECTION VARIABLES======================*/
+
+/* Padding on top for nav bar, set minimum height to be window height */
+#minArea {
+    padding-top: 7.4rem;
+    min-height: 90vh;
+    background-color: var(--dark);
+}
+
+/* The banner on the home page */
+#banner {
+    min-height: 35rem;
+    padding: 5vh 5vw;  /* top, right, bottom, left */
+
+    background-color: var(--dark);
+}
+
+/*=========================RESPONSIVE SECTION VARIABLES=====================*/
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.columnHalf {
+    flex: 50%;
+    max-width: 50%;
+    padding: 0 2rem;
+}
+.columnThird {
+    flex: 33%;
+    max-width: 33%;
+    padding: 0 2rem;
+}
+
+/* Detect when screen size is at a smaller width (for resized windows and mobile */
+@media only screen and (max-width: 1220px) {
+    /* Change to 2 columns */
+    .columnThird {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+@media only screen and (max-width: 780px) {
+    /* Change to 1 column */
+    .columnThird {
+        flex: 100%;
+        max-width: 100%;
+    }
+    .columnHalf {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+/*=========================SMALL SECTION VARIABLES=====================*/
 
 .section {
-    padding: 50px 50px;
+    min-height: 35rem;
+    padding: 5vh 5vw;
     background-color: var(--mid);
 }
 .section.midGray {
@@ -269,29 +393,12 @@ body {
 .section.black {
     background-color: black;
 }
-.section h1 {
-    color: white;
-    font-family: var(--headerFontFamily);
-    font-weight: var(--headerFontWeight);
-    font-size: 22px;
 
-    padding: 0px 0px 25px 0px;
-}
-.section h2 {
-    color: white;
-    font-family: var(--headerFontFamily);
-    font-weight: var(--headerFontWeight);
-    font-size: 20px;
+.videoBanner {
+    text-align: center;
+    background-color: black;
 
-    padding: 0px 0px 8px 0px;
-}
-.section p {
-    color: white;
-    font-family: var(--bodyFontFamily);
-    font-weight: var(--bodyFontWeight);
-    font-size: 18px;
-
-    padding: 0px 0px 40px 0px;
+    height: 50vh;
 }
 
 /*=====================================COLUMN VARIABLES========================*/
@@ -325,84 +432,42 @@ body {
 .column.midGray {
     background-color: var(--mid);
 }
-.sectionText {
-    width: 80%;
-    margin: auto;
-}
-.sectionText.centered {
-    text-align: center;
-    margin: auto;
-    padding: 50px 0px;
-}
-.sectionText h1 {
-    color: white;
-    font-family: var(--headerFontFamily);
-    font-weight: var(--headerFontWeight);
-    font-size: 36px;
-
-    padding: 0px 0px 25px 0px;
-}
-.sectionText h2 {
-    color: white;
-    font-family: var(--headerFontFamily);
-    font-weight: var(--headerFontWeight);
-    font-size: 24px;
-
-    padding: 0px 0px 8px 0px;
-}
-.sectionText p {
-    color: white;
-    font-family: var(--bodyFontFamily);
-    font-weight: var(--bodyFontWeight);
-    font-size: 18px;
-
-    padding: 0px 0px 18px 0px;
-}
-
-/*===============================PROJECT GRID VARIABLES========================*/
-
-.projectGrid {
-    display: flex;
-    justify-content: space-between;
-}
 
 /*===============================PROJECT BOX 1 VARIABLES========================*/
 
 .projectBox {
-    width: 30%;
-    height: 300px;
-    padding: 20px;
+    min-height: 30rem;
+    padding: 2rem;
+    margin-top: 4rem;
 
-    border: 2px solid var(--light);
-    border-radius: 10px;
+    border: 0.2rem solid var(--light);
+    border-radius: 1rem;
 
     transition: all .2s ease-in-out;
     transform: scale(1.0);
 }
-
 .projectBox h1{
     color: white;
     font-family: var(--headerFontFamily);
     font-weight: var(--headerFontWeight);
 
     /* transition the font size from small to large on hover */
-    font-size: 20px;
+    font-size: 2rem;
     transition: font-size .2s;
 }
 .projectBox p {
     color: white;
     font-family: var(--headerFontFamily);
     font-weight: var(--headerFontWeight);
-    font-size: 16px;
+    font-size: 1.6rem;
 
     /* transition the opacity from none to full on hover */
     opacity: 0;
     transition: opacity .2s;
 }
-
 .projectBox.expanded {
     cursor: pointer;
-    border: 2px solid var(--mid-blue);
+    border: 0.2rem solid var(--mid-blue);
     transform: scale(1.1);
 
     /* Darken the background image on hover */
@@ -410,59 +475,9 @@ body {
     background-blend-mode: darken;
 }
 .projectBox.expanded h1 {
-    font-size: 36px;
+    font-size: 3.6rem;
 }
 .projectBox p.revealed {
-    opacity: 1;
-}
-
-/*===============================PROJECT BOX 2 VARIABLES========================*/
-
-.projectBox2 {
-    width: 49%;
-    height: 300px;
-    padding: 20px;
-
-    border: 2px solid var(--light);
-    border-radius: 10px;
-
-    transition: all .2s ease-in-out;
-    transform: scale(1.0);
-}
-
-.projectBox2 h1{
-    color: white;
-    font-family: var(--headerFontFamily);
-    font-weight: var(--headerFontWeight);
-
-    /* transition the font size from small to large on hover */
-    font-size: 20px;
-    transition: font-size .2s;
-}
-.projectBox2 p {
-    color: white;
-    font-family: var(--headerFontFamily);
-    font-weight: var(--headerFontWeight);
-    font-size: 16px;
-
-    /* transition the opacity from none to full on hover */
-    opacity: 0;
-    transition: opacity .2s;
-}
-
-.projectBox2.expanded {
-    cursor: pointer;
-    border: 2px solid var(--mid-blue);
-    transform: scale(1.05);
-
-    /* Darken the background image on hover */
-    background-color: rgba(0, 0, 0, 0.7);
-    background-blend-mode: darken;
-}
-.projectBox2.expanded h1 {
-    font-size: 36px;
-}
-.projectBox2 p.revealed {
     opacity: 1;
 }
 
@@ -509,15 +524,6 @@ body {
 .projectBox3.expanded h1 {
     color: white;
     font-size: 28px;
-}
-
-/*===============================VIDEO BANNER VARIABLES========================*/
-
-.videoBanner {
-    text-align: center;
-    background-color: black;
-
-    height: 50vh;
 }
 
 /*===============================IMAGE GALLERY VARIABLES========================*/
@@ -682,32 +688,3 @@ body {
 
 /*===============================HANDLE DIFFERENT SCREEN SIZES========================*/
 
-/* Detect when screen size is at a smaller width (for resized windows and mobile */
-@media only screen and (max-width: 760px) {
-    /* if screen is small, show button, hide links */
-    .navBar .navBarMenuButton {
-        display: block;
-    }
-    .navBar .navBarToggle {
-        display: none;
-    }
-
-    /* if screen is small AND nav bar is opened, display vertical links */
-    .navBar.open ul {
-        display: block
-    }
-    .navBar.open .navBarToggle {
-        display: block;
-    }
-    .navBar.open a {
-        display: block;
-    }
-    /* hide the hamburger icon */
-    .navBar.open .navBarMenuButton .menuIconOpen {
-        display: none;
-    }
-    /* show the close icon */
-    .navBar.open .navBarMenuButton .menuIconClose {
-        display: block;
-    }
-}
