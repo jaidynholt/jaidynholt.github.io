@@ -288,39 +288,10 @@ footer a:active  > div.iconButton {
 
     padding: 0px 0px 40px 0px;
 }
-
-.sectionText2 {
-    width: 80%;
-    margin: auto;
-}
-.sectionText2.centered {
+.sectionText.centered {
     text-align: center;
     margin: auto;
     padding: 50px 0px;
-}
-.sectionText2 h1 {
-    color: white;
-    font-family: var(--headerFontFamily);
-    font-weight: var(--headerFontWeight);
-    font-size: 36px;
-
-    padding: 0px 0px 25px 0px;
-}
-.sectionText2 h2 {
-    color: white;
-    font-family: var(--headerFontFamily);
-    font-weight: var(--headerFontWeight);
-    font-size: 24px;
-
-    padding: 0px 0px 8px 0px;
-}
-.sectionText2 p {
-    color: white;
-    font-family: var(--bodyFontFamily);
-    font-weight: var(--bodyFontWeight);
-    font-size: 18px;
-
-    padding: 0px 0px 18px 0px;
 }
 
 /*===========================LARGE SECTION VARIABLES======================*/
@@ -336,8 +307,29 @@ footer a:active  > div.iconButton {
 #banner {
     min-height: 35rem;
     padding: 5vh 5vw;  /* top, right, bottom, left */
-
     background-color: var(--dark);
+}
+
+.section {
+    padding: 5vh 5vw;
+    background-color: var(--mid);
+}
+.section.midGray {
+    background-color: var(--mid);
+}
+.section.darkGray {
+    background-color: var(--dark);
+}
+.section.black {
+    background-color: black;
+}
+
+.videoBanner {
+    text-align: center;
+    background-color: black;
+
+    min-height: 50vh;
+    max-height: 90vh;
 }
 
 /*=========================RESPONSIVE SECTION VARIABLES=====================*/
@@ -377,62 +369,6 @@ footer a:active  > div.iconButton {
     }
 }
 
-/*=========================SMALL SECTION VARIABLES=====================*/
-
-.section {
-    min-height: 35rem;
-    padding: 5vh 5vw;
-    background-color: var(--mid);
-}
-.section.midGray {
-    background-color: var(--mid);
-}
-.section.darkGray {
-    background-color: var(--dark);
-}
-.section.black {
-    background-color: black;
-}
-
-.videoBanner {
-    text-align: center;
-    background-color: black;
-
-    height: 50vh;
-}
-
-/*=====================================COLUMN VARIABLES========================*/
-
-.columnContainer {
-    display: flex;
-    justify-content: space-evenly;
-}
-.column {
-    display: inline-block;
-    width: 50vw;
-    min-height: 600px;
-    padding: 50px;
-    margin: auto;
-}
-.column2.smaller {
-    display: inline-block;
-    width: 30vw;
-    padding: 50px;
-    margin: auto;
-}
-.column.larger {
-    display: inline-block;
-    width: 70vw;
-    padding: 50px;
-    margin: auto;
-}
-.column.darkGray {
-    background-color: var(--dark);
-}
-.column.midGray {
-    background-color: var(--mid);
-}
-
 /*===============================PROJECT BOX 1 VARIABLES========================*/
 
 .projectBox {
@@ -442,6 +378,8 @@ footer a:active  > div.iconButton {
 
     border: 0.2rem solid var(--light);
     border-radius: 1rem;
+
+    cursor: pointer;
 
     transition: all .2s ease-in-out;
     transform: scale(1.0);
@@ -481,56 +419,66 @@ footer a:active  > div.iconButton {
     opacity: 1;
 }
 
-/*===============================PROJECT BOX 3 VARIABLES========================*/
+/*===============================LINK BOX VARIABLES========================*/
 
-.projectBox3 {
-    width: 30%;
-    height: 160px;
-    padding: 20px;
+.linkBox {
+    min-height: 14rem;
+    padding: 1rem;
+    margin-top: 2rem;
 
-    border: 2px solid var(--light);
-    border-radius: 10px;
+    border: 0.2rem solid var(--light);
+    border-radius: 1rem;
 
     background-color: var(--light);
     text-align: center;
 
+    cursor: pointer;
+
     transition: all .2s ease-in-out;
     transform: scale(1.0);
 }
-.projectBox3.longer {
-    width: 100%;
-    height: 130px;
-}
 
-.projectBox3 h1{
+.linkBox h1{
     color: white;
     font-family: var(--headerFontFamily);
     font-weight: var(--headerFontWeight);
 
     /* transition the font size from small to large on hover */
-    font-size: 24px;
-    padding: 0px;
+    font-size: 2.4rem;
+    padding: 0;
     transition: font-size .2s;
 }
-
-.projectBox3.expanded {
+.linkBox.expanded {
     cursor: pointer;
-    border: 2px solid var(--mid-blue);
+    border: 0.2rem solid var(--mid-blue);
     transform: scale(1.1);
 
     /* Darken the background image on hover */
     background-color: var(--mid);
 }
-.projectBox3.expanded h1 {
+.linkBox.expanded h1 {
     color: white;
-    font-size: 28px;
+    font-size: 2.8rem;
+}
+
+/*===============================IFRAME VARIABLES========================*/
+
+.videoDiv iframe {
+    aspect-ratio: 16/9;
+    max-height: 90vh;
+    max-width: 100%;
+    border: none;
+}
+
+.widget iframe {
+    max-width: 100%;
 }
 
 /*===============================IMAGE GALLERY VARIABLES========================*/
 
 /* Image Gallery container */
 .imageGallery {
-    padding: 0px 100px;
+    padding: 0 10rem;
     height: auto;
     width: 100%;
 
@@ -544,8 +492,8 @@ footer a:active  > div.iconButton {
 
 .thumbnailGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1rem;
 }
 
 .thumbnail {
@@ -557,11 +505,11 @@ footer a:active  > div.iconButton {
     display: block;
 }
 .thumbnail.current {
-    border: 2px solid var(--mid-blue);
+    border: 0.2rem solid var(--mid-blue);
 }
 .thumbnail.hover {
     cursor: pointer;
-    border: 2px solid var(--mid-blue);
+    border: 0.2rem solid var(--mid-blue);
 }
 
 /* Add a pointer when hovering over the thumbnail images */
@@ -572,17 +520,17 @@ footer a:active  > div.iconButton {
 
 .prevArrow, .nextArrow {
     position: relative;
-    bottom: 250px;
+    bottom: 25rem;
     z-index: 2;
 
     color: white;
-    font-size: 48px;
+    font-size: 4.8rem;
 }
 .prevArrow {
-    right: 10px;
+    right: 1rem;
 }
 .nextArrow {
-    left: 10px;
+    left: 1rem;
 }
 .prevArrow:hover, .nextArrow:hover {
     color: var(--mid-blue);
