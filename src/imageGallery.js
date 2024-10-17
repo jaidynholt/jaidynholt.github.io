@@ -56,6 +56,20 @@ const galleries = {
             "../../images/RecipeForRevenge/rfr_11.png"
         ]
     },
+    "wizardOrbEscapeGallery": {
+        index: 0,
+        images: [
+            "../../images/WizardOrbEscape/woe_1.png",
+            "../../images/WizardOrbEscape/woe_2.png",
+            "../../images/WizardOrbEscape/woe_3.png",
+            "../../images/WizardOrbEscape/woe_4.png",
+            "../../images/WizardOrbEscape/woe_5.png",
+            "../../images/WizardOrbEscape/woe_6.png",
+            "../../images/WizardOrbEscape/woe_7.png",
+            "../../images/WizardOrbEscape/woe_8.png",
+            "../../images/WizardOrbEscape/woe_9.png"
+        ]
+    },
     "minesweeperGallery": {
         index: 0,
         images: [

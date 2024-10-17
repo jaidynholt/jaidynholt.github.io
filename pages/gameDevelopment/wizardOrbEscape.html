@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <title>Wizard Orb Escape | Jaidyn Holt Portfolio</title>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../../src/index.js"></script>
+    <script src="../../src/imageGallery.js"></script>
+    <body onload="LoadImageGallery('wizardOrbEscapeGallery')">
+        <nav id="navBar" class="navBar">
+            <ul>
+                <li class="logo"><a href="../../index.html" target="_self">JAIDYN HOLT</a></li>
+                <div class="navBarToggle">
+                    <li><a href="../../index.html" target="_self">Home</a></li>
+                    <li><a href="../work.html" target="_self">Work</a></li>
+                    <li><a href="../about.html" target="_self">About</a></li>
+                    <li><a href="../contact.html" target="_self">Contact</a></li>
+                </div>
+            </ul>
+            <button id="navButton" class="navBarMenuButton" onClick="ToggleNavBar()">
+                <div class="menuIconOpen">
+                    <svg  xmlns="http://www.w3.org/2000/svg"
+                    width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <line x1="4" y1="6" x2="20" y2="6" />
+                        <line x1="4" y1="12" x2="20" y2="12" />
+                        <line x1="4" y1="18" x2="20" y2="18" />
+                    </svg>
+                </div>
+                <div class="menuIconClose">
+                    <svg  xmlns="http://www.w3.org/2000/svg"
+                    width="24"  height="24"  viewBox="0 0 24 24"  fill="none"
+                    stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-x">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M18 6l-12 12" />
+                        <path d="M6 6l12 12" />
+                    </svg>
+                </div>
+            </button>
+        </nav>
+        <div id="minArea">
+            <div class="section darkGray">
+                <div class="sectionText">
+                    <h1>Wizard Orb Escape</h1>
+                    <h2>2024</h2><br>
+                    <p>
+                        Wizard Orb Escape is a 3D puzzle game (demo) made with Unity in a team of three.
+                    </p>
+                    <p>
+                        I was one of two gameplay programmers and implemented the light refraction, UI, cutscene, and scene change mechanics (C#).
+                        I was also responsible for technical art and graphics using Unity shader graph, including the light beam shader, procedural
+                        cobblestone material, water shader, orb shader, mirror shader, and other materials.
+                        I was also the level designer, responsible for importing all art assets (3D and 2D), designing and arranging the level,
+                        hooking up scripts, and playtesting. 
+                    </p>
+                </div>
+            </div>
+            <div class="videoBanner">
+                <div class="videoDiv"><iframe
+                    src="https://youtube.com/embed/ESC6ufYIFqs?autoplay=1&mute=1&rel=0"
+                    height="480" marginHeight="0" marginWidth="0" allow="autoplay" loop allowfullscreen>
+                    Loading...
+                </iframe></div>
+            </div>
+            <div class="section darkGray">
+                <div class="row">
+                    <div class="columnHalf">
+                        <div class="sectionText">
+                            <h2>About</h2><br>
+                            <p>
+                                You are an evil magical spirit who has been trapped in a magical prison orb by a wizard.
+                                However, due to a mysterious cause, the prison's integrity is compromised and you escape,
+                                finding yourself in the wizard's magical tower keep!
+                                The door can only be opened by the wizard's magic. Luckily, that same magic is leaking out
+                                from the breach in your prison...
+                            </p>
+                            <p>
+                                Use the mirrors, lenses, and other objects in the keep to bend, reflect, and refract the
+                                magic light beam to reach the door and open it!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="columnHalf">
+                        <div class="sectionText">
+                            <h2>Play the Game</h2><br>
+                            <p>More feature details on the Itch.io page!</p>
+                            <p>Itch.io page:</p>
+                            <div class="widget"><iframe frameborder="0"
+                                src="https://itch.io/embed/3011438?linkback=true&amp;border_width=2&amp;bg_color=6B6E70&amp;fg_color=ffffff&amp;link_color=1ea5a0&amp;border_color=32e0da"
+                                width="554" height="169">
+                                <a href="https://holtj.itch.io/wizard-orb-escape">
+                                    Wizard Orb Escape by HoltJ, HitPoints, crestielle
+                                </a>
+                            </iframe></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section midGray">
+                <div class="sectionText centered"><h2>Gameplay Captures</h2></div>
+                <div id="wizardOrbEscapeGallery" class="imageGallery">
+                    <div class="imageSlide">
+                        <img src="../../images/WizardOrbEscape/woe_1.png" alt="Gameplay image" width="100%">
+                        <a class="prevArrow" onclick="IncrementSlides('wizardOrbEscapeGallery', -1)">&#10094;</a>
+                        <a class="nextArrow" onclick="IncrementSlides('wizardOrbEscapeGallery', 1)">&#10095;</a>
+                    </div>
+
+                    <!-- Thumbnail images: populated dynamically -->
+                    <div class="thumbnailGrid"></div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <a href="mailto: jaidyn.h.holt@gmail.com" target="_blank">
+                <div class="iconButton">
+                    <img class="icon" src="../../assets/emailIcon.svg" alt="email link" />
+                </div>
+            </a>
+            <a href="https://linkedin.com/in/jaidyn-holt-b44693271" target="_blank">
+                <div class="iconButton">
+                    <img class="icon" src="../../assets/linkedinIcon.svg" alt="LinkedIn link" />
+                </div>
+            </a>
+        </footer>
+    </body>
+
+</html>
