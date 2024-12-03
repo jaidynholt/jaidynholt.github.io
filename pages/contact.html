@@ -4,7 +4,7 @@
     <title>Contact | Jaidyn Holt Portfolio</title>
     <meta name="viewport" content="width = device-width, initial-scale = 1">
     <link rel="stylesheet" href="style.css">
-    <script src=""></script>
+    <script src="../src/index.js"></script>
     <body>
         <nav id="navBar" class="navBar">
             <ul>
@@ -12,7 +12,6 @@
                 <div class="navBarToggle">
                     <li><a href="../index.html" target="_self">Home</a></li>
                     <li><a href="work.html" target="_self">Work</a></li>
-                    <li><a href="about.html" target="_self">About</a></li>
                     <li><a class="current" href="contact.html" target="_self">Contact</a></li>
                 </div>
             </ul>
@@ -41,26 +40,79 @@
             </button>
         </nav>
         <div id="minArea">
-            <div class="sectionText centered">
-                <!-- Intro heading -->
-                <h1>Contact</h1>
-                <p>LinkedIn:   <a 
-                        class="textLink"
-                        href="https://linkedin.com/in/jaidyn-holt-b44693271"
-                        target="_blank">
-                        jaidyn-holt-b44693271
-                    </a>
-                </p>
-                <p>Email:     <a 
-                        class="textLink"
-                        href="mailto: jaidyn.h.holt@gmail.com"
-                        target="_blank">
-                        jaidyn.h.holt@gmail.com
-                    </a>
-                </p><br>
-            </div>
+            <div class="padding"></div>
+            <div class="section darkGray">
+                <div class="sectionText"><h1>About Me</h1></div>
+                <div class="row">
+                    <div class="columnHalf">
+                        <div class="sectionText">
+                            <h2>University of Florida</h2>
+                            <h2>BA Digital Arts and Sciences | BS Computer Science</h2> <br>
 
-            
+                            <!-- Bio text -->
+                            <p>
+                                Hello! I am an undergraduate student at the University of Florida
+                                pursuing a dual major in Digital Arts and Sciences (BA) and
+                                Computer Science (BS) with a focus in game development.
+                            </p>
+                            <p>
+                                I am a technical artist and game developer. I am passionate about creating fun experiences
+                                and interactive stories through a creative combination of art and technology.
+                            </p>                        
+                        </div>
+                    </div>
+                    <div class="columnHalf">
+                        <div class="sectionText">
+                            <p>
+                                Contact me at
+                                <a class="textLink" href="mailto: jaidyn.h.holt@gmail.com" target="_blank">jaidyn.h.holt@gmail.com</a>
+                            </p>                      
+                        </div>
+                        <div class="row">
+                            <div class="columnHalf">
+                                <div id="projectBox16" class="linkBox"
+                                onmouseenter="ExpandProjectBox('projectBox16')" onmouseleave="CollapseProjectBox('projectBox16')"
+                                onclick="ExternalLinkButton('https:\/\/holtj.itch.io/')">
+                                    <h1>Itch.io</h1>
+                                    <br><hr><br>
+                                    <a class="textLink" href="https://holtj.itch.io/" target="_blank">
+                                        holtj.itch.io
+                                    </a>
+                                </div>
+                                <div id="projectBox19" class="linkBox"
+                                onmouseenter="ExpandProjectBox('projectBox19')" onmouseleave="CollapseProjectBox('projectBox19')"
+                                onclick="ExternalLinkButton('https:\/\/github.com/jaidynholt')">
+                                    <h1>GitHub</h1>
+                                    <br><hr><br>
+                                    <a class="textLink" href="https://github.com/jaidynholt" target="_blank">
+                                        github.com/ jaidynholt
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="columnHalf">
+                                <div id="projectBox17" class="linkBox"
+                                onmouseenter="ExpandProjectBox('projectBox17')" onmouseleave="CollapseProjectBox('projectBox17')"
+                                onclick="ExternalLinkButton('https:\/\/linkedin.com/in/jaidynholt')">
+                                    <h1>LinkedIn</h1>
+                                    <br><hr><br>
+                                    <a class="textLink" href="https://linkedin.com/in/jaidynholt" target="_blank">
+                                        linkedin.com/in/ jaidynholt
+                                    </a>
+                                </div>
+                                <div id="projectBox18" class="linkBox"
+                                onmouseenter="ExpandProjectBox('projectBox18')" onmouseleave="CollapseProjectBox('projectBox18')"
+                                onclick="ExternalLinkButton('../files/resume.pdf')">
+                                    <h1>Resume</h1>
+                                    <br><hr><br>
+                                    <a class="textLink" href="../files/resume.pdf" target="_blank">
+                                        view / download
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <footer>
             <a href="mailto: jaidyn.h.holt@gmail.com" target="_blank">
@@ -68,7 +120,7 @@
                     <img class="icon" src="../assets/emailIcon.svg" alt="email link" />
                 </div>
             </a>
-            <a href="https://linkedin.com/in/jaidyn-holt-b44693271" target="_blank">
+            <a href="https://linkedin.com/in/jaidynholt" target="_blank">
                 <div class="iconButton">
                     <img class="icon" src="../assets/linkedinIcon.svg" alt="LinkedIn link" />
                 </div>

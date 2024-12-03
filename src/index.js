@@ -44,8 +44,10 @@ window.addEventListener('scroll', (event) => {
     // if the nav bar scroll position is greater, add the shadow class
     if (window.scrollY > 0) {
         navBar.classList.add('hasShadow');
+        navBar.classList.add('isOpaque');
     }
     else {
         navBar.classList.remove('hasShadow');
+        navBar.classList.remove('isOpaque');
     }
 })

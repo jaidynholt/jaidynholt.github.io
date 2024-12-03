@@ -42,7 +42,7 @@ body {
     position: fixed;
     z-index: 10;
 
-    background-color: var(--dark);
+    background-color: none;
 
     color: white;
     font-size: 1.8rem;
@@ -112,6 +112,9 @@ body {
 .hasShadow {
     box-shadow: rgba(18, 20, 22, 0.669) 0px 2px 7px 0px;
 }
+.isOpaque {
+    background-color: var(--dark);
+}
 
 /* Detect when screen size is at a smaller width (for resized windows and mobile */
 @media only screen and (max-width: 760px) {
@@ -124,6 +127,9 @@ body {
     }
 
     /* if screen is small AND nav bar is opened, display vertical links */
+    .navBar.open {
+        background-color: var(--dark);
+    }
     .navBar.open ul {
         display: block
     }
@@ -298,16 +304,22 @@ footer a:active  > div.iconButton {
 
 /* Padding on top for nav bar, set minimum height to be window height */
 #minArea {
-    padding-top: 7.4rem;
     min-height: 90vh;
     background-color: var(--dark);
+}
+.padding {
+    height: 8rem;
 }
 
 /* The banner on the home page */
 #banner {
-    min-height: 35rem;
-    padding: 5vh 5vw;  /* top, right, bottom, left */
+    min-height: 40rem;
+    padding: 15vh 5vw;  /* top, right, bottom, left */
     background-color: var(--dark);
+    background-image: url("../assets/Banner_1.png");
+    background-repeat: no-repeat;
+    background-position: center; /* Center the image */
+    background-size: cover; /* Resize the background image to cover the entire box */
 }
 
 .section {
@@ -361,6 +373,10 @@ footer a:active  > div.iconButton {
         flex: 50%;
         max-width: 50%;
     }
+    .columnFourth {
+        flex: 50%;
+        max-width: 50%;
+    }
 }
 @media only screen and (max-width: 780px) {
     /* Change to 1 column */
@@ -369,6 +385,10 @@ footer a:active  > div.iconButton {
         max-width: 100%;
     }
     .columnHalf {
+        flex: 100%;
+        max-width: 100%;
+    }
+    .columnFourth {
         flex: 100%;
         max-width: 100%;
     }
@@ -393,6 +413,7 @@ footer a:active  > div.iconButton {
     color: white;
     font-family: var(--headerFontFamily);
     font-weight: var(--headerFontWeight);
+    text-shadow: 0.1rem 0.2rem 0.4rem #000000;
 
     /* transition the font size from small to large on hover */
     font-size: 2rem;
@@ -650,6 +671,12 @@ footer a:active  > div.iconButton {
     background-image: url("../images/WizardOrbEscape/woe_3.png");
     background-repeat: no-repeat;
     background-position: bottom; /* Center the image */
+    background-size: cover; /* Resize the background image to cover the entire box */
+}
+#projectBox25 {
+    background-image: url("../images/Artistree_2.png");
+    background-repeat: no-repeat;
+    background-position: top; /* Center the image */
     background-size: cover; /* Resize the background image to cover the entire box */
 }
 
