@@ -155,6 +155,8 @@ body {
 footer {
     overflow: hidden;
     height: 10vh;
+    padding-top: 1.5em;
+    padding-right: 1em;
 
     background-color: var(--dark);
 }
@@ -162,7 +164,7 @@ footer {
 /* The links inside the footer */
 footer a {
     float: right;
-    padding: 1.5em 1.5em;  /* top, right, bottom, left */
+    padding: 0.5em 0.5em;  /* top, right, bottom, left */
 
     color: white;
     text-align: center;
@@ -200,6 +202,13 @@ footer a:active  > div.iconButton {
 
     background-color: white;
 }
+.iconButtonLarge {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+
+    background-color: white;
+}
 
 /* The icon img inside the iconButton divs */
 .icon {
@@ -207,7 +216,7 @@ footer a:active  > div.iconButton {
     margin-left: auto;
     margin-right: auto;
     padding-top: 0.7rem;
-    height: 72%;
+    height: 75%;
 }
 
 /*=================================SCROLLBAR VARIABLES========================*/
@@ -323,7 +332,7 @@ footer a:active  > div.iconButton {
 }
 
 .section {
-    padding: 5vh 5vw;
+    padding: 10vh 5vw;
     background-color: var(--mid);
 }
 .section.midGray {
@@ -349,6 +358,11 @@ footer a:active  > div.iconButton {
 .row {
     display: flex;
     flex-wrap: wrap;
+}
+.columnTwoThirds {
+    flex: 67%;
+    max-width: 67%;
+    padding: 0 2rem;
 }
 .columnHalf {
     flex: 50%;
@@ -448,7 +462,6 @@ footer a:active  > div.iconButton {
 /*===============================LINK BOX VARIABLES========================*/
 
 .linkBox {
-    min-height: 14rem;
     padding: 1rem;
     margin-top: 2rem;
 
@@ -464,7 +477,7 @@ footer a:active  > div.iconButton {
     transform: scale(1.0);
 }
 .linkBox.subNav {
-    min-height: 10rem;
+    min-height: 6rem;
 }
 
 .linkBox h1{
@@ -677,6 +690,12 @@ footer a:active  > div.iconButton {
     background-image: url("../images/Artistree_2.png");
     background-repeat: no-repeat;
     background-position: top; /* Center the image */
+    background-size: cover; /* Resize the background image to cover the entire box */
+}
+#projectBox26 {
+    background-image: url("../images/handwritingOCR/ocr_2.png");
+    background-repeat: no-repeat;
+    background-position: center; /* Center the image */
     background-size: cover; /* Resize the background image to cover the entire box */
 }
 

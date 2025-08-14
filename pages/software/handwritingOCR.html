@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <title>Handwriting OCR Model App | Jaidyn Holt Portfolio</title>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../../src/index.js"></script>
+    <body>
+        <nav id="navBar" class="navBar">
+            <ul>
+                <li class="logo"><a href="../../index.html" target="_self">JAIDYN HOLT</a></li>
+                <div class="navBarToggle">
+                    <li><a href="../../index.html" target="_self">Home</a></li>
+                    <li><a href="../work.html" target="_self">Work</a></li>
+                    <li><a href="../contact.html" target="_self">Contact</a></li>
+                </div>
+            </ul>
+            <button id="navButton" class="navBarMenuButton" onClick="ToggleNavBar()">
+                <div class="menuIconOpen">
+                    <svg  xmlns="http://www.w3.org/2000/svg"
+                    width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <line x1="4" y1="6" x2="20" y2="6" />
+                        <line x1="4" y1="12" x2="20" y2="12" />
+                        <line x1="4" y1="18" x2="20" y2="18" />
+                    </svg>
+                </div>
+                <div class="menuIconClose">
+                    <svg  xmlns="http://www.w3.org/2000/svg"
+                    width="24"  height="24"  viewBox="0 0 24 24"  fill="none"
+                    stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-x">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M18 6l-12 12" />
+                        <path d="M6 6l12 12" />
+                    </svg>
+                </div>
+            </button>
+        </nav>
+        <div id="minArea">
+            <div class="padding"></div>
+            <div class="section darkGray">
+                <div class="sectionText">
+                    <h1>Handwriting OCR Model App</h1>
+                    <h2>2025</h2><br>
+                    <p>
+                        This application uses a trained machine model for optical character recognition (OCR)<br>
+                        to recognize text from an image of handwriting and then analyze it using the Natural Language Toolkit (NLTK).
+                    </p>
+                    <p>
+                        This project was developed in a team of two for the 2025 WiNGHacks hackathon.
+                    </p>
+                    <p>
+                        See the DevPost here:<br>
+                        <a class="textLink" href="https://devpost.com/software/handwriting-ocr-model-app" target="_blank">
+                            https://devpost.com/software/handwriting-ocr-model-app
+                        </a>
+                    </p>
+                    <p>
+                        See the complete project on GitHub:<br>
+                        <a class="textLink" href="https://github.com/jaidynholt/Handwriting-OCR-Model-App" target="_blank">
+                            https://github.com/jaidynholt/Handwriting-OCR-Model-App
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="videoBanner">
+                <div class="videoDiv"><iframe
+                    src="https://drive.google.com/file/d/1-8CWSMbW6a4oYIN-S4wLmIiaPjL9HMUO/preview"
+                    width="640" height="480" marginHeight="0" marginWidth="0" allow="autoplay" allowfullscreen>Loading...
+                </iframe></div>
+            </div>
+            <div class="section darkGray">
+                <div class="sectionText centered">
+                    <h2>Process</h2>
+                </div>
+                <div class="sectionText">
+                    <p>
+                        Our project was inspired by our curiosity with computer vision and machine learning.
+                        Machine learning models and computer vision were areas we had no experience in but were excited to try.
+                        A relevant unique challenge was recognizing handwriting,
+                        which we also thought would would be a fun and interactive project to showcase at the hackathon expo.
+                    </p>
+                </div>
+                <div class="sectionText centered">
+                    <img src="../../images/handwritingOCR/ocr_1.png"
+                    alt="Handwriting OCR app home screen"
+                    width="49%">
+                </div>
+                <div class="sectionText">
+                    <p>
+                        We initially planned to train an open source machine learning model on a large handwriting data set,
+                        so we began by searching for suitable datasets on Kaggle. However, even after finding several candidates, we realized
+                        that training a model is a large undertaking and overscoped for this project, especially since we wanted to implement
+                        user interaction too, so we pivoted to using a pre-trained model.<br>
+                        Our research led us to Tesseract, an open source optical character recognition (OCR) engine. After our initial tests with Tesseract,
+                        we discovered that it was not accurate enough for handwriting. We explored other handwriting-specific models, eventually<br>
+                        discovering <a class="textLink" href="https://huggingface.co/docs/transformers/en/model_doc/trocr" target="_blank">TrOCR</a>, a
+                        transformer-based model with many open source pre-trained models, including several trained on English handwriting.<br>
+                        Celia was responsible for connecting the model to our app and testing it.
+                    </p>
+                </div>
+                <div class="sectionText centered">
+                    <h2>GUI</h2>
+                </div>
+                <div class="sectionText">
+                    <p>
+                        I was responsible for the user input and interface of the app. We
+                        used <a class="textLink" href="https://opencv.org/" target="_blank">OpenCV</a>, which was great to learn and work with because
+                        it was very robust and exactly what we needed for computer vision. It helped me more easily access the camera, which was a large
+                        part of our idea to make the project real-time interactive (instead of requiring photos to be uploaded and accessed from file).
+                        I saved the image and sent it to the model to recognize the text.<br>
+                        The model was having trouble finding the handwriting in the raw camera image, especially when it contained people and backgrounds.
+                        We solved this by first processing the image to make it more friendly for the model:
+                        <b>auto-cropping</b>, detecting the bounding box of the paper and crop the image to remove distracting backgrounds;
+                        <b>de-skewing</b>, detecting the tilt of the handwriting and applying transformations to correct the skew;
+                        and <b>contrast adjustment</b>, increasing contrast to remove paper texture and printed lines.
+                    </p>
+                </div>
+                <div class="sectionText centered">
+                    <img src="../../images/handwritingOCR/ocr_2.png"
+                    alt="Handwriting OCR app image confirmation screen"
+                    width="49%">
+                </div>
+                <div class="sectionText">
+                    <p>
+                        I was responsible for the app's graphical user interface. We decided this was a must-have; while initially testing the models, we relied on command line printing
+                        and passing photo file paths into functions, which would make for slow and cumbersome user interaction. <br>
+                        Firstly, I implemented a window to show the camera's feed and a countdown to display on the window using OpenCV. This was important because the photo needed
+                        to be of a certain quality or the accuracy of the model would plummet. Trying to take a photo without knowing what the camera saw or when the camera took it
+                        was an issue we found while testing.<br>
+                        After taking the photo, it would apply the processing steps listed above and display the manipulated image. In particular, we found that the auto-cropping
+                        was highly dependent on the quality of the photo, working best when the paper was held against a dark background. Often, it would not work as well, so I added
+                        an additional crop button to the interface to allow the user to manually crop the image more.<br>
+                        I also added a button to retake the photo, which aided testing and ensured the best possible photo would be sent to the model.
+                    </p>
+                    <p>
+                        After clicking the button to confirm the image, we sent it to the model and then displayed the text output to the app.<br>
+                        For a fun addition to the app, we decided to analyze the results and keep/display them as statistics to the GUI. We ran
+                        the output through the <a class="textLink" href="https://www.nltk.org/" target="_blank">Natural Language Toolkit (NLTK) library</a> for a breakdown of its parts of speech.<br>
+                        Then we displayed the results of the input, or had the option to display the statistics of all the users' inputs.
+                    </p>
+                </div>
+                <div class="sectionText centered">
+                    <img src="../../images/handwritingOCR/ocr_3.png"
+                    alt="Handwriting OCR app image confirmation screen"
+                    width="49%">
+                    <img src="../../images/handwritingOCR/ocr_4.png"
+                    alt="Handwriting OCR app image confirmation screen"
+                    width="49%">
+                </div>
+                <div class="sectionText">
+                    <p>
+                        I used <a class="textLink" href="https://customtkinter.tomschimansky.com/" target="_blank">CustomTKinter</a> for
+                        the GUI, a library based on Python's built-in GUI TKinter. Though I had some experience in building GUIs with React,
+                        I was completely new to building a GUI in Python. I settled on CustomTKinter because of its ability to make clean,
+                        designed windows quickly as opposed to TKinter. In addition, working with OpenCV's windows and drawing for the video feed and
+                        photo capture was a unique challenge to work with the TKinter GUI.
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <a href="https://github.com/jaidynholt" target="_blank">
+                <div class="iconButton">
+                    <img class="icon" src="../../assets/githubIcon.svg" alt="GitHub link" />
+                </div>
+            </a>
+            <a href="https://holtj.itch.io/" target="_blank">
+                <div class="iconButton">
+                    <img class="icon" src="../../assets/itchioIcon.svg" alt="itch.io link" />
+                </div>
+            </a>
+            <a href="https://linkedin.com/in/jaidynholt" target="_blank">
+                <div class="iconButton">
+                    <img class="icon" src="../../assets/linkedinIcon.svg" alt="LinkedIn link" />
+                </div>
+            </a>
+            <a href="mailto: jaidyn.h.holt@gmail.com" target="_blank">
+                <div class="iconButton">
+                    <img class="icon" src="../../assets/emailIcon.svg" alt="email link" />
+                </div>
+            </a>
+        </footer>
+    </body>
+
+</html>
