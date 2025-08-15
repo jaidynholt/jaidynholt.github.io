@@ -41,6 +41,8 @@ body {
     width: 100vw;
     position: fixed;
     z-index: 10;
+    padding-top: 1em;
+    padding-bottom: 1em;
 
     background-color: none;
 
@@ -59,7 +61,8 @@ body {
     list-style: none; /*Gets rid of the bullet points */
 }
 .navBar li {
-    padding: 2.8em; /*1em is one line height */
+    padding-left: 2.8em; /*1em is one line height */
+    padding-right: 2.8em;
 }
 /* The logo should float left, the rest of the links are on the right of nav bar */
 .navBar li.logo {
@@ -92,8 +95,8 @@ body {
 /* The hamburger button */
 .navBar .navBarMenuButton {
     position: absolute;
-    top: 1.8rem;
-    right: 2.8rem;
+    top: 1em;
+    right: 2.8em;
 
     display: none;
 
@@ -301,7 +304,10 @@ footer a:active  > div.iconButton {
 .sectionText p {
     font-size: 18px;
 
-    padding: 0px 0px 40px 0px;
+    padding: 18px 0px 18px 0px;
+}
+.sectionText ul {
+    font-size: 18px;
 }
 .sectionText.centered {
     text-align: center;
@@ -317,7 +323,7 @@ footer a:active  > div.iconButton {
     background-color: var(--dark);
 }
 .padding {
-    height: 8rem;
+    height: 6rem;
 }
 
 /* The banner on the home page */
@@ -520,7 +526,6 @@ footer a:active  > div.iconButton {
 
 /* Image Gallery container */
 .imageGallery {
-    padding: 0 10rem;
     height: auto;
     width: 100%;
 
@@ -535,7 +540,7 @@ footer a:active  > div.iconButton {
 .imageSlide img {
     min-width: 100%;
     max-width: 100%;
-    max-height: 100%;
+    max-height: 90vh;
 }
 
 .thumbnailGrid {
@@ -669,7 +674,7 @@ footer a:active  > div.iconButton {
     background-size: cover; /* Resize the background image to cover the entire box */
 }
 #projectBox14 {
-    background-image: url("../images/Artwork/Enchanted_forest_art_4.jpg");
+    background-image: url("../images/CKI/Enchanted_forest_art_4.jpg");
     background-repeat: no-repeat;
     background-position: center; /* Center the image */
     background-size: cover; /* Resize the background image to cover the entire box */
@@ -693,7 +698,7 @@ footer a:active  > div.iconButton {
     background-size: cover; /* Resize the background image to cover the entire box */
 }
 #projectBox26 {
-    background-image: url("../images/handwritingOCR/ocr_2.png");
+    background-image: url("../images/HandwritingOCR/ocr_2.png");
     background-repeat: no-repeat;
     background-position: center; /* Center the image */
     background-size: cover; /* Resize the background image to cover the entire box */
