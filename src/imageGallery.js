@@ -70,6 +70,23 @@ const galleries = {
             "../../images/WizardOrbEscape/woe_9.png"
         ]
     },
+    "GigglesGoofyGameshowGallery": {
+        index: 0,
+        images: [
+            "../../images/GigglesGoofyGameshow/ggg_1.png",
+            "../../images/GigglesGoofyGameshow/ggg_2.png",
+            "../../images/GigglesGoofyGameshow/ggg_3.png",
+            "../../images/GigglesGoofyGameshow/ggg_4.png",
+            "../../images/GigglesGoofyGameshow/ggg_5.png",
+            "../../images/GigglesGoofyGameshow/ggg_6.png",
+            "../../images/GigglesGoofyGameshow/ggg_7.png",
+            "../../images/GigglesGoofyGameshow/ggg_8.png",
+            "../../images/GigglesGoofyGameshow/ggg_9.png",
+            "../../images/GigglesGoofyGameshow/ggg_10.png",
+            "../../images/GigglesGoofyGameshow/ggg_11.png",
+            "../../images/GigglesGoofyGameshow/ggg_12.png"
+        ]
+    },
     "minesweeperGallery": {
         index: 0,
         images: [

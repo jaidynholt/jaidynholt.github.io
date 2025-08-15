@@ -59,7 +59,7 @@ body {
     list-style: none; /*Gets rid of the bullet points */
 }
 .navBar li {
-    padding: 2.8rem; /*1em is one line height */
+    padding: 2.8em; /*1em is one line height */
 }
 /* The logo should float left, the rest of the links are on the right of nav bar */
 .navBar li.logo {
@@ -535,7 +535,7 @@ footer a:active  > div.iconButton {
 .imageSlide img {
     min-width: 100%;
     max-width: 100%;
-    max-height: 80vh;
+    max-height: 100%;
 }
 
 .thumbnailGrid {
@@ -698,6 +698,13 @@ footer a:active  > div.iconButton {
     background-position: center; /* Center the image */
     background-size: cover; /* Resize the background image to cover the entire box */
 }
+#projectBox27 {
+    background-image: url("../images/GigglesGoofyGameshow/ggg_1.png");
+    background-repeat: no-repeat;
+    background-position: center; /* Center the image */
+    background-size: cover; /* Resize the background image to cover the entire box */
+}
+/*we're up to box 30*/
 
 
 /*===============================HANDLE DIFFERENT SCREEN SIZES========================*/
