@@ -383,7 +383,7 @@ footer a:active  > div.iconButton {
 }
 .sectionText.half {
     flex: 50%;
-    min-width: 420px;
+    min-width: 380px;
 }
 .sectionText.third {
     flex: 33%;
@@ -498,7 +498,7 @@ footer a:active  > div.iconButton {
 }
 .linkGrid.projectLinks {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 2rem;
 }
 .linkButton {
