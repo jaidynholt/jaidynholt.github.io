@@ -18,18 +18,34 @@ function ExternalLinkButton(link) {
 
 // Add a shadow to the nav bar when scrolled
 window.addEventListener('scroll', (event) => {
-    // First get the nav bar by id
-    const navBar = document.getElementById('navBar');
-    // if the nav bar scroll position is greater, add the shadow class
+    // if the nav bar scroll position is greater than 0, add the shadow class
     if (window.scrollY > 0) {
+        const navBar = document.getElementById('navBar');
         navBar.classList.add('hasShadow');
         navBar.classList.add('isOpaque');
     }
     else {
+        const navBar = document.getElementById('navBar');
         navBar.classList.remove('hasShadow');
         navBar.classList.remove('isOpaque');
     }
+    // if scroll position is greater than the banner, reveal toTopArrow
+    if (window.scrollY > 200) {
+        const arrow = document.getElementById('toTop');
+        arrow.classList.remove('invisible');
+    }
+    else {
+        const arrow = document.getElementById('toTop');
+        arrow.classList.add('invisible');
+    }
 })
+
+function ScrollToPosition(pixelsFromTop) {
+    window.scrollTo({
+        top: pixelsFromTop,
+        behavior: 'smooth'
+    });
+}
 
 function ToggleFilter(filterId) {
     // get the filter button that called this

@@ -40,12 +40,19 @@
                 </div>
             </button>
         </nav>
+        <div id="toTop" class="toTopButton invisible" onClick="ScrollToPosition(0)">
+            <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170.05 113.31">
+                <g id="Layer_1-2" data-name="Layer 1">
+                    <path class="cls-1" d="m74.04,4.54L7.19,71.39c-9.59,9.59-9.59,25.14,0,34.73h0c9.59,9.59,25.14,9.59,34.73,0l35.86-35.86c4.02-4.02,10.53-4.02,14.54,0l35.81,35.81c9.59,9.59,25.13,9.59,34.72,0h0c9.59-9.59,9.59-25.14,0-34.73L95.97,4.54c-6.06-6.05-15.88-6.05-21.94,0Z"/>
+                </g>
+            </svg>
+        </div>
         <div id="minArea">
             <div class="padding"></div>
-            <div class="section darkGray">
+            <div class="section">
                 <div class="sectionText">
                     <h1>Solar Systems Down</h1>
-                    <h2>2024</h2><br>
+                    <h3>2024</h3><br>
                     <p>
                         Solar Systems Down is a 2D pixel art adventure shooter made with Unity.
                         This game was made in 44 hours by Team Tart (four members) at the 2024
@@ -62,46 +69,38 @@
                     width="640" height="480" marginHeight="0" marginWidth="0" allow="autoplay" allowfullscreen>Loading...
                 </iframe></div>
             </div>
-            <div class="section darkGray">
-                <div class="row">
-                    <div class="columnHalf">
-                        <div class="sectionText">
-                            <h2>About</h2><br>
-                            <p>
-                                The game jam theme was "sunshine," so the game takes place in a post-post-apocalyptic,
-                                solar-punk inspired world where people use solar power systems to live and
-                                keep the sludge away.
-                            </p>
-                            <p>
-                                Enter Sol, our main character and solar systems engineer, living the nomadic
-                                life on his solar sail airship. When his solar sail crashes into a flooded town,
-                                the townspeople offer to give him the parts to fix it in exchange for repairing their
-                                house solar systems and destroying the invading sludge.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="columnHalf">
-                        <div class="sectionText">
-                            <h2>Play the Game</h2><br>
-                            <p>More feature details on the Itch.io page!</p>
-                            <p>Itch.io page:</p>
-                            <div class="widget"><iframe frameborder="0"
-                            src="https://itch.io/embed/2551878?linkback=true&amp;border_width=2&amp;bg_color=6B6E70&amp;fg_color=fff&amp;link_color=1ea5a0&amp;border_color=32e0da"
-                            width="554" height="169">
-                                <a href="https://holtj.itch.io/solar-systems-down">Solar Systems Down by HoltJ, Jane Apostol, HitPoints</a>
-                            </iframe></div>
-                        </div>
-                    </div>
+            <div class="section">
+                <div class="sectionText half">
+                    <h2>About</h2><br>
+                    <p>
+                        The game jam theme was "sunshine," so the game takes place in a post-post-apocalyptic,
+                        solar-punk inspired world where people use solar power systems to live and
+                        keep the sludge away.
+                    </p>
+                    <p>
+                        Enter Sol, our main character and solar systems engineer, living the nomadic
+                        life on his solar sail airship. When his solar sail crashes into a flooded town,
+                        the townspeople offer to give him the parts to fix it in exchange for repairing their
+                        house solar systems and destroying the invading sludge.
+                    </p>
+                </div>
+                <div class="sectionText half">
+                    <h2>Play the Game</h2><br>
+                    <p>More feature details on the Itch.io page!</p>
+                    <p>Itch.io page:</p>
+                    <div class="widget"><iframe frameborder="0"
+                    src="https://itch.io/embed/2551878?linkback=true&amp;border_width=2&amp;bg_color=6B6E70&amp;fg_color=fff&amp;link_color=1ea5a0&amp;border_color=32e0da"
+                    width="554" height="169">
+                        <a href="https://holtj.itch.io/solar-systems-down">Solar Systems Down by HoltJ, Jane Apostol, HitPoints</a>
+                    </iframe></div>
                 </div>
             </div>
-            <div class="section midGray">
+            <div class="section">
                 <div class="sectionText centered"><h2>Gameplay Captures</h2></div>
                 <div id="solarSystemsDownGallery" class="imageGallery">
-                    <div class="imageSlide">
-                        <img src="../../images/SolarSystemsDown/ssd_image1.png" alt="Gameplay image" width="100%">
-                        <a class="prevArrow" onclick="IncrementSlides('solarSystemsDownGallery', -1)">&#10094;</a>
-                        <a class="nextArrow" onclick="IncrementSlides('solarSystemsDownGallery', 1)">&#10095;</a>
-                    </div>
+                    <div class="prevArrow" onclick="IncrementSlides('solarSystemsDownGallery', -1)">&#10094;</div>
+                    <div class="imageSlide"><img src="../../images/SolarSystemsDown/ssd_image1.png" alt="Gameplay image" width="100%"></div>
+                    <div class="nextArrow" onclick="IncrementSlides('solarSystemsDownGallery', 1)">&#10095;</div>
 
                     <!-- Thumbnail images: populated dynamically -->
                     <div class="thumbnailGrid"></div>

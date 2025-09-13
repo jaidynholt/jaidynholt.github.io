@@ -40,12 +40,19 @@
                 </div>
             </button>
         </nav>
+        <div id="toTop" class="toTopButton invisible" onClick="ScrollToPosition(0)">
+            <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170.05 113.31">
+                <g id="Layer_1-2" data-name="Layer 1">
+                    <path class="cls-1" d="m74.04,4.54L7.19,71.39c-9.59,9.59-9.59,25.14,0,34.73h0c9.59,9.59,25.14,9.59,34.73,0l35.86-35.86c4.02-4.02,10.53-4.02,14.54,0l35.81,35.81c9.59,9.59,25.13,9.59,34.72,0h0c9.59-9.59,9.59-25.14,0-34.73L95.97,4.54c-6.06-6.05-15.88-6.05-21.94,0Z"/>
+                </g>
+            </svg>
+        </div>
         <div id="minArea">
             <div class="padding"></div>
-            <div class="section darkGray">
+            <div class="section">
                 <div class="sectionText">
                     <h1>Social Media Graphics</h1>
-                    <h2>2024</h2><br>
+                    <h3>2024</h3><br>
                     <p>
                         As Social Media Manager (fall 2023 - spring 2024) for the BADAS Mentorship program,
                         a peer mentorship program for students within the University of Florida
@@ -58,12 +65,9 @@
                     </p>
                 </div>
                 <div id="socialMediaGallery" class="imageGallery">
-                    <div class="imageSlide">
-                        <img src="../../images/SocialPosts/bmp_1.jpg" alt="image" width="100%">
-                        <a class="prevArrow" onclick="IncrementSlides('socialMediaGallery', -1)">&#10094;</a>
-                        <a class="nextArrow" onclick="IncrementSlides('socialMediaGallery', 1)">&#10095;</a>
-                    </div>
-
+                    <div class="imageSlide"><img src="../../images/SocialPosts/bmp_1.jpg" alt="image" width="100%"></div>
+                    <div class="prevArrow" onclick="IncrementSlides('socialMediaGallery', -1)">&#10094;</div>
+                    <div class="nextArrow" onclick="IncrementSlides('socialMediaGallery', 1)">&#10095;</div>
                     <!-- Thumbnail images: populated dynamically -->
                     <div class="thumbnailGrid"></div>
                 </div>

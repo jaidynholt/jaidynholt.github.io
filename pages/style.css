@@ -224,6 +224,46 @@ footer a:active  > div.iconButton {
     height: 75%;
 }
 
+/*=================================TO TOP BUTTON==============================*/
+
+.toTopButton {
+    position: fixed;
+    z-index: 9;
+    bottom: 8rem;
+    right: 4rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 3vw;
+    height: 3vw;
+
+    cursor: pointer;
+
+    border: 0.1rem solid var(--accent1);
+    border-radius: 50%;
+    background-color: var(--dark);
+}
+.toTopButton svg {
+    width: 70%;
+    height: 70%;
+    fill: var(--accent1);
+}
+.toTopButton:hover {
+    background-color: var(--accent1);
+}
+.toTopButton:hover svg {
+    fill: var(--dark);
+}
+.toTopButton:active {
+    border: none;
+    background-color: var(--accent2);
+}
+.toTopButton.invisible {
+    display: none;
+}
+
 /*=================================SCROLLBAR VARIABLES========================*/
 
 ::-webkit-scrollbar {
@@ -239,16 +279,18 @@ footer a:active  > div.iconButton {
   
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: var(--dark);
+    border: 0.1rem solid var(--accent1);
+    border-radius: 1rem;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--light);
+    background: var(--accent1);
 }
 ::-webkit-scrollbar-thumb:active {
+    border: none;
     background: var(--accent2);
 }
 
-/*============================TEXT FORMATTING VARIABLES========================*/
+/*============================TEXT LINK========================*/
 
 .textLink {
     color: var(--accent2);
@@ -264,65 +306,7 @@ footer a:active  > div.iconButton {
     color: var(--accent2);
 }
 
-/* Text for the banner */
-.bannerText.centered {
-    text-align: center;
-    margin: auto;
-    padding: 2em;
-
-    color: var(--light);
-    font-family: var(--headerFontFamily);
-    font-weight: var(--headerFontWeight);
-
-    border: 0.1em solid var(--accent1);
-    border-radius: 1rem;
-    background-color: var(--dark);
-}
-.bannerText h1 {
-    font-size: 6rem;
-}
-.bannerText h2 {
-    font-size: 2rem;
-}
-.bannerText hr {
-    border: 0.1rem solid var(--accent1);
-}
-
-/* Text in the small sections */
-.sectionText {
-    color: var(--light);
-    font-family: var(--bodyFontFamily);
-    font-weight: var(--bodyFontWeight);
-}
-.sectionText h1 {
-    font-family: var(--headerFontFamily);
-    font-weight: var(--headerFontWeight);
-    font-size: 22px;
-
-    padding: 0px 0px 25px 0px;
-}
-.sectionText h2 {
-    font-family: var(--headerFontFamily);
-    font-weight: var(--headerFontWeight);
-    font-size: 20px;
-
-    padding: 0px 0px 8px 0px;
-}
-.sectionText p {
-    font-size: 18px;
-
-    padding: 18px 0px 18px 0px;
-}
-.sectionText ul {
-    font-size: 18px;
-}
-.sectionText.centered {
-    text-align: center;
-    margin: auto;
-    padding: 50px 0px;
-}
-
-/*===========================LARGE SECTION VARIABLES======================*/
+/*===========================MAIN BODY VARIABLES======================*/
 
 /* Padding on top for nav bar, set minimum height to be window height */
 #minArea {
@@ -332,6 +316,8 @@ footer a:active  > div.iconButton {
 .padding {
     height: 6rem;
 }
+
+/*===========================LANDING BANNER======================*/
 
 /* The banner on the home page */
 #banner {
@@ -343,14 +329,28 @@ footer a:active  > div.iconButton {
     background-position: center; /* Center the image */
     background-size: cover; /* Resize the background image to cover the entire box */
 }
+/* Text for the banner */
+.bannerText.centered {
+    text-align: center;
+    margin: auto;
+    padding: 2em;
 
-.section {
-    padding: 10vh 10vw;
-    background-color: var(--dark);
+    color: var(--light);
+    font-family: var(--headerFontFamily);
+    font-weight: var(--headerFontWeight);
+
+    /* border: 0.1em solid var(--accent1);
+    border-radius: 1rem;
+    background-color: var(--dark); */
 }
-.section.black {
-    background-color: black;
+.bannerText h1 {
+    font-size: 6rem;
 }
+.bannerText h2 {
+    font-size: 2rem;
+}
+
+/*===========================VIDEO SECTION VARIABLES===========================*/
 
 .videoBanner {
     text-align: center;
@@ -360,13 +360,87 @@ footer a:active  > div.iconButton {
     max-height: 90vh;
 }
 
-/*=========================RESPONSIVE SECTION VARIABLES=====================*/
+/*===========================SECTION VARIABLES===========================*/
 
-.row {
+.section {
+    padding: 10vh 10vw;
+    background-color: var(--dark);
     display: flex;
     flex-wrap: wrap;
 }
-.columnTwoThirds {
+.section.black {
+    background-color: black;
+}
+
+/* Text in the small sections */
+.sectionText {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: var(--light);
+    font-family: var(--bodyFontFamily);
+    font-weight: var(--bodyFontWeight);
+    flex: 100%;
+}
+.sectionText.half {
+    flex: 50%;
+    min-width: 420px;
+}
+.sectionText.third {
+    flex: 33%;
+    min-width: 360px;
+}
+.sectionText h1 {
+    font-family: var(--headerFontFamily);
+    font-weight: var(--headerFontWeight);
+    font-size: 2.4rem;
+
+    padding-top: 4rem;
+    padding-bottom: 4rem
+}
+.sectionText h2 {
+    font-family: var(--headerFontFamily);
+    font-weight: var(--headerFontWeight);
+    font-size: 2em;
+
+    padding-top: 2rem;
+    padding-bottom: 2rem
+}
+.sectionText h3 {
+    font-family: var(--headerFontFamily);
+    font-weight: var(--headerFontWeight);
+    font-size: 1.6em;
+    color: var(--accent2);
+
+    padding-top: 1rem;
+    padding-bottom: 1rem
+}
+.sectionText p {
+    font-size: 1.8rem;
+
+    padding: 18px 0px 18px 0px;
+}
+.sectionText ul {
+    font-size: 18px;
+}
+.sectionText.centered {
+    text-align: center;
+    margin: auto;
+    padding: 50px;
+}
+
+/*=========================INLINE IMAGES VARIABLES=====================*/
+
+.inlineImages {
+    flex: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    gap: 1rem;
+    align-content: start;
+}
+
+/*=========================RESPONSIVE SECTION VARIABLES=====================*/
+
+/* .columnTwoThirds {
     flex: 67%;
     max-width: 67%;
     padding: 0 2rem;
@@ -385,11 +459,11 @@ footer a:active  > div.iconButton {
     flex: 25%;
     max-width: 25%;
     padding: 0 2rem;
-}
+} */
 
 /* Detect when screen size is at a smaller width (for resized windows and mobile */
-@media only screen and (max-width: 1220px) {
-    /* Change to 2 columns */
+/* Change to 2 columns */
+/* @media only screen and (max-width: 1220px) {
     .columnThird {
         flex: 50%;
         max-width: 50%;
@@ -398,9 +472,9 @@ footer a:active  > div.iconButton {
         flex: 50%;
         max-width: 50%;
     }
-}
-@media only screen and (max-width: 780px) {
-    /* Change to 1 column */
+} */
+/* Change to 1 columns */
+/* @media only screen and (max-width: 780px) {
     .columnThird {
         flex: 100%;
         max-width: 100%;
@@ -413,7 +487,7 @@ footer a:active  > div.iconButton {
         flex: 100%;
         max-width: 100%;
     }
-}
+} */
 
 /*===============================LINK BUTTONS & GRID========================*/
 
@@ -424,7 +498,7 @@ footer a:active  > div.iconButton {
 }
 .linkGrid.projectLinks {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
     gap: 2rem;
 }
 .linkButton {
@@ -446,18 +520,19 @@ footer a:active  > div.iconButton {
 
     cursor: pointer;
 
+    transform: translate(0rem, 0.5rem);
     transition: all .2s ease-in-out;
-    transform: scale(1.0);
 }
 .linkButton:hover {
     background-color: var(--accent1);
     color: var(--dark);
-    transform: scale(1.05);
+    transform: translate(0rem, -0.5rem);
 }
 
 /*===============================FILTER BUTTONS & GRID========================*/
 
 .filterGrid {
+    flex: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     gap: 2rem;
@@ -510,21 +585,20 @@ footer a:active  > div.iconButton {
 
     cursor: pointer;
 
+    transform: translate(0rem, 0.5rem);
     transition: all .2s ease-in-out;
-    transform: scale(1.0);
 }
 .projectBoxImage {
     border-radius: 1rem 1rem 0rem 0rem;
-    height: 70%;
+    min-width: 100%;
+    height: 100%;
     overflow: clip;
     display: flex;
     justify-content: center;
-
-    transition: height .2s;
 }
 .projectBoxImage img {
     display: inline-block;
-    min-width: 100%;
+    width: 100%;
     height: 100%;
     object-fit: cover;
 }
@@ -535,43 +609,36 @@ footer a:active  > div.iconButton {
     font-family: var(--bodyFontFamily);
     font-weight: var(--bodyFontWeight);
     font-size: 2rem;
-    /* text-shadow: 0.1rem 0.2rem 0.4rem #000000; */
-
-    /* transition the font size from small to large on hover */
-    transition: font-size .2s;
 }
 .projectBox p {
     padding-left: 2rem;
     padding-right: 2rem;
-    padding-bottom: 2rem;
 
     color: var(--dark);
     font-family: var(--bodyFontFamily);
     font-weight: var(--bodyFontWeight);
     font-size: 1.6rem;
 
-    /* transition the opacity from none to full on hover */
-    display: none;
     opacity: 0;
-    transition: opacity .2s;
+    transition: opacity .1s;
 }
 .projectBox:hover {
     cursor: pointer;
     border: 0.2rem solid var(--accent1);
-    transform: scale(1.05);
+    transform: translate(0rem, -0.5rem);
     box-shadow: rgba(18, 20, 22, 0.669) 0px 2px 7px 0px;
-}
-.projectBox:hover .projectBoxImage {
-    border-radius: 1rem 1rem 0rem 0rem;
-    height: 30%;
-    overflow: clip;
+
+    grid-template-rows: 30% 15% 35% 20%;
+    transition: all .2s ease-in-out;
 }
 .projectBox:hover p {
-    display: block;
     opacity: 1;
+    transition: opacity .3s .2s;
 }
 .filteredOn {
-    display: block;
+    display: grid;
+    grid-template-rows: 65% 15% 0% 20%;
+    transition: all .2s ease-in-out;
 }
 
 /*===============================FEATURED PROJECT BOX========================*/
@@ -580,7 +647,7 @@ footer a:active  > div.iconButton {
     grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
 }
 .featuredProjectBox {
-    height: 60rem;
+    height: 55rem;
 
     border: 0.2rem solid var(--light);
     border-radius: 1rem;
@@ -588,8 +655,11 @@ footer a:active  > div.iconButton {
 
     cursor: pointer;
 
+    display: grid;
+    grid-template-rows: 70% 10% 0% 20%;
+
+    transform: translate(0rem, 0.5rem);
     transition: all .2s ease-in-out;
-    transform: scale(1.0);
 }
 .featuredProjectBox h1{
     padding: 2rem;
@@ -598,40 +668,31 @@ footer a:active  > div.iconButton {
     font-family: var(--bodyFontFamily);
     font-weight: var(--bodyFontWeight);
     font-size: 2rem;
-    /* text-shadow: 0.1rem 0.2rem 0.4rem #000000; */
-
-    /* transition the font size from small to large on hover */
-    transition: font-size .2s;
 }
 .featuredProjectBox p {
     padding-left: 2rem;
     padding-right: 2rem;
-    padding-bottom: 2rem;
 
     color: var(--dark);
     font-family: var(--bodyFontFamily);
     font-weight: var(--bodyFontWeight);
     font-size: 1.6rem;
 
-    /* transition the opacity from none to full on hover */
-    display: none;
     opacity: 0;
-    transition: opacity .2s;
+    transition: opacity .1s;
 }
 .featuredProjectBox:hover {
     cursor: pointer;
     border: 0.2rem solid var(--accent1);
-    transform: scale(1.05);
+    transform: translate(0rem, -0.5rem);
     box-shadow: rgba(18, 20, 22, 0.669) 0px 2px 7px 0px;
-}
-.featuredProjectBox:hover .projectBoxImage {
-    border-radius: 1rem 1rem 0rem 0rem;
-    height: 30%;
-    overflow: clip;
+
+    grid-template-rows: 30% 10% 40% 20%;
+    transition: all .2s ease-in-out;
 }
 .featuredProjectBox:hover p {
-    display: block;
     opacity: 1;
+    transition: opacity .3s .2s;
 }
 
 /*===============================SOFTWARE ICONS========================*/
@@ -642,6 +703,7 @@ footer a:active  > div.iconButton {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-content: center;
 }
 .softwareIcon {
     width: 6rem;
@@ -651,48 +713,6 @@ footer a:active  > div.iconButton {
     height: 75%;
     margin-left: auto;
     margin-right: auto;
-}
-
-/*===============================LINK BOX VARIABLES========================*/
-
-.linkBox {
-    padding: 1rem;
-    margin-top: 2rem;
-
-    border: 0.2rem solid var(--accent1);
-    border-radius: 1rem;
-
-    background-color: var(--dark);
-    text-align: center;
-
-    cursor: pointer;
-
-    transition: all .2s ease-in-out;
-    transform: scale(1.0);
-}
-.linkBox.subNav {
-    min-height: 6rem;
-}
-
-.linkBox h1{
-    color: var(--light);
-    font-family: var(--headerFontFamily);
-    font-weight: var(--headerFontWeight);
-
-    /* transition the font size from small to large on hover */
-    font-size: 2.4rem;
-    padding: 0;
-    transition: font-size .2s;
-}
-.linkBox:hover {
-    cursor: pointer;
-    border: 0.2rem solid var(--accent1);
-    transform: scale(1.1);
-    background-color: var(--accent1);
-}
-.linkBox:hover h1 {
-    color: var(--dark);
-    font-size: 2.8rem;
 }
 
 /*===============================IFRAME VARIABLES========================*/
@@ -712,24 +732,27 @@ footer a:active  > div.iconButton {
 
 /* Image Gallery container */
 .imageGallery {
-    height: auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+    gap: 2rem;
     width: 100%;
-
-    text-align: center;
 }
-
 .imageSlide {
+    grid-row: 1;
+    grid-column: 2 / span 2;
     display: inline-block;
-    max-width: 100%;
     text-align: center;
+
 }
 .imageSlide img {
     min-width: 100%;
     max-width: 100%;
     max-height: 90vh;
 }
-
 .thumbnailGrid {
+    grid-row: 2;
+    grid-column: 1 / span 4;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: 1rem;
@@ -737,11 +760,12 @@ footer a:active  > div.iconButton {
 
 .thumbnail {
     width: 100%;
-    max-height: 80%;
+    height: 100%;
     border: none;
+    overflow: clip;
 }
 .thumbnail img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     display: block;
 }
@@ -760,16 +784,11 @@ footer a:active  > div.iconButton {
 
 
 .prevArrow, .nextArrow {
-    z-index: 2;
-
+    grid-row: 1;
+    align-self: center;
+    justify-self: center;
     color: var(--light);
     font-size: 4.8rem;
-}
-.prevArrow {
-    margin-right: auto;
-}
-.nextArrow {
-    margin-left: auto;
 }
 .prevArrow:hover, .nextArrow:hover {
     color: var(--accent1);
