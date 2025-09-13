@@ -572,17 +572,16 @@ footer a:active  > div.iconButton {
 
 .projectGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
     gap: 5rem 5rem;
 }
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
     .projectGrid {
        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     }
-} 
+}  */
 .projectBox {
-    display: none;
-    height: 40rem;
+    height: 55rem;
 
     border: 0.2rem solid var(--light);
     border-radius: 1rem;
@@ -648,9 +647,6 @@ footer a:active  > div.iconButton {
 
 /*===============================FEATURED PROJECT BOX========================*/
 
-.projectGrid.featured{
-    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
-}
 .featuredProjectBox {
     height: 55rem;
 
@@ -661,7 +657,7 @@ footer a:active  > div.iconButton {
     cursor: pointer;
 
     display: grid;
-    grid-template-rows: 70% 10% 0% 20%;
+    grid-template-rows: 65% 15% 0% 20%;
 
     transform: translate(0rem, 0.5rem);
     transition: all .2s ease-in-out;
@@ -692,7 +688,7 @@ footer a:active  > div.iconButton {
     transform: translate(0rem, -0.5rem);
     box-shadow: rgba(18, 20, 22, 0.669) 0px 2px 7px 0px;
 
-    grid-template-rows: 30% 10% 40% 20%;
+    grid-template-rows: 30% 15% 35% 20%;
     transition: all .2s ease-in-out;
 }
 .featuredProjectBox:hover p {
