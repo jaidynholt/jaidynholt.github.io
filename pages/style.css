@@ -229,15 +229,15 @@ footer a:active  > div.iconButton {
 .toTopButton {
     position: fixed;
     z-index: 9;
-    bottom: 8rem;
-    right: 4rem;
+    bottom: 8vh;
+    right: 4vw;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    width: 3vw;
-    height: 3vw;
+    width: 3rem;
+    height: 3rem;
 
     cursor: pointer;
 
@@ -575,6 +575,11 @@ footer a:active  > div.iconButton {
     grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
     gap: 5rem 5rem;
 }
+@media only screen and (max-width: 600px) {
+    .projectGrid {
+       grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    }
+} 
 .projectBox {
     display: none;
     height: 40rem;
