@@ -8,26 +8,6 @@ function ToggleNavBar() {
     }
 }
 
-function ExpandProjectBox(id) {
-    const projectBox = document.getElementById(id);
-    projectBox.classList.add("expanded");
-    projectBox.classList.add("hasShadow");
-    // if this project box is type 1 or 2, reveal the hidden text (don't do this for type 3)
-    if (projectBox.classList.contains("projectBox") || projectBox.classList.contains("projectBox2")) {
-        projectBox.lastElementChild.classList.add("revealed");
-    }
-}
-
-function CollapseProjectBox(id) {
-    const projectBox = document.getElementById(id);
-    projectBox.classList.remove("expanded");
-    projectBox.classList.remove("hasShadow");
-    // if this project box is type 1 or 2, hide the revealed text (don't do this for type 3)
-    if (projectBox.classList.contains("projectBox") || projectBox.classList.contains("projectBox2")) {
-        projectBox.lastElementChild.classList.remove("revealed");
-    }
-}
-
 function NavigationButton(link) {
     location.href = link;
 }
@@ -35,7 +15,6 @@ function NavigationButton(link) {
 function ExternalLinkButton(link) {
     window.open(link, '_blank');
 }
-
 
 // Add a shadow to the nav bar when scrolled
 window.addEventListener('scroll', (event) => {
@@ -51,3 +30,54 @@ window.addEventListener('scroll', (event) => {
         navBar.classList.remove('isOpaque');
     }
 })
+
+function ToggleFilter(filterId) {
+    // get the filter button that called this
+    const filterButton = document.getElementById(filterId);
+
+    // activate 'all'
+    if (filterId == 'all' && !filterButton.classList.contains('filterOn')){
+        // deactivate everything else first
+        const filterButtons = document.getElementsByClassName('filterButton');
+        for (var i = 0; i < filterButtons.length; i++){ filterButtons[i].classList.remove('filterOn'); }
+
+        // then activate all
+        filterButton.classList.add('filterOn');
+        FilterProjects(filterId, true);
+    }
+    // activating something other than 'all'
+    else if (!filterButton.classList.contains('filterOn')) {
+        // if 'all' is activated, deactivate it and deactivate all projects
+        if (document.getElementById('all').classList.contains('filterOn')){
+            document.getElementById('all').classList.remove('filterOn');
+            FilterProjects('all', false);
+        }
+
+        // then activate the filter
+        filterButton.classList.add('filterOn');
+        FilterProjects(filterId, true);
+    }
+    // deactivate something other than 'all'
+    else if (filterId != 'all' && filterButton.classList.contains('filterOn')){
+        filterButton.classList.remove('filterOn');
+        FilterProjects(filterId, false);
+    }
+}
+
+function FilterProjects(selectedFilter, isOn) {
+    if (selectedFilter == 'all'){
+        // get all the projects
+        const projects = document.getElementsByClassName('projectBox');
+        // make all visible
+        if (isOn) { for (var i = 0; i < projects.length; i++){ projects[i].classList.add('filteredOn'); } }
+        else { for (var i = 0; i < projects.length; i++){ projects[i].classList.remove('filteredOn'); } }
+    }
+    else {
+        // get all the projects with the filter name
+        const projects = document.getElementsByClassName(selectedFilter);
+        if (isOn) { for (var i = 0; i < projects.length; i++){ projects[i].classList.add('filteredOn'); } }
+        else { for (var i = 0; i < projects.length; i++){ projects[i].classList.remove('filteredOn'); } }
+    }
+}
+
+

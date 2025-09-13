@@ -1,5 +1,6 @@
 /*========================GLOBAL STYLE VARIABLES========================*/
 
+@import url('https://fonts.googleapis.com/css2?family=Overpass+Mono');
 @import url('https://fonts.googleapis.com/css2?family=Mulish');
 
 *, *::before, *::after {
@@ -7,17 +8,17 @@
     margin: 0;
     box-sizing: border-box;
 
-    --dark: #222629;
-    --mid: #474B4F;
-    --light: #6B6E70;
+    --dark: #1A202B;
+    --light: #EAE8EE;
     
-    --bright-blue: #32e0da;
-    --mid-blue: #1ea5a0;
+    --accent3: #F4B942;
+    --accent2: #FADF63;
+    --accent1: #4EC9B0;
 
-    --bodyFontFamily: 'Mulish', sans-serif;
+    --bodyFontFamily: 'Mulish';
     --bodyFontWeight: 100;
 
-    --headerFontFamily: 'Mulish', sans-serif; 
+    --headerFontFamily: 'Overpass Mono'; 
     --headerFontWeight: 500;
 
 }
@@ -46,7 +47,7 @@ body {
 
     background-color: none;
 
-    color: white;
+    color: var(--light);
     font-size: 1.8rem;
     font-family: var(--headerFontFamily);
     font-weight: var(--headerFontWeight);
@@ -75,18 +76,18 @@ body {
 }
 /* The nav bar links on hover */
 .navBar a:hover {
-    color: var(--mid-blue);
+    color: var(--accent1);
 }
 /* The active nav bar link (being pressed) */
 .navBar a:active {
-    color: var(--bright-blue);
+    color: var(--accent2);
 }
 /* The current link */
 .navBar a.current {
-    color: var(--mid-blue);
+    color: var(--accent1);
 }
 .navBar a.current:active {
-    color: var(--bright-blue);
+    color: var(--accent2);
 }
 
 .navBar .navBarToggle {
@@ -106,7 +107,7 @@ body {
     cursor: pointer;
 }
 .navBar .navBarMenuButton svg {
-    stroke: white;
+    stroke: var(--light);
 }
 .navBar .navBarMenuButton .menuIconClose {
     display: none;
@@ -169,7 +170,7 @@ footer a {
     float: right;
     padding: 0.5em 0.5em;  /* top, right, bottom, left */
 
-    color: white;
+    color: var(--light);
     text-align: center;
     text-decoration: none;
     font-size: 1.8rem;
@@ -179,22 +180,22 @@ footer a {
 
 /* The links inside the footer */
 footer a:hover {
-    color: var(--mid-blue);
+    color: var(--accent1);
 }
 
 /* The iconButton links on hover */
 footer a:hover > div.iconButton {
-    background-color: var(--mid-blue);
+    background-color: var(--accent1);
 }
 
 /* The active footer link (being pressed) */
 footer a:active {
-    color: var(--bright-blue);
+    color: var(--accent2);
 }
 
 /* The iconButton links active (being pressed) */
 footer a:active  > div.iconButton {
-    color: var(--bright-blue);
+    color: var(--accent2);
 }
 
 /* The circle div that surrounds the icon img */
@@ -203,14 +204,15 @@ footer a:active  > div.iconButton {
     height: 3rem;
     border-radius: 50%;
 
-    background-color: white;
+    background-color: var(--light);
 }
 .iconButtonLarge {
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
+    margin-right: 2rem;
 
-    background-color: white;
+    background-color: var(--light);
 }
 
 /* The icon img inside the iconButton divs */
@@ -237,53 +239,58 @@ footer a:active  > div.iconButton {
   
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: var(--mid);
+    background: var(--dark);
 }
 ::-webkit-scrollbar-thumb:hover {
     background: var(--light);
 }
 ::-webkit-scrollbar-thumb:active {
-    background: var(--bright-blue);
+    background: var(--accent2);
 }
 
 /*============================TEXT FORMATTING VARIABLES========================*/
 
 .textLink {
-    color: var(--bright-blue);
+    color: var(--accent2);
     font-family: var(--bodyFontFamily);
     font-weight: var(--bodyFontWeight);
     font-size: 1.8rem;
     text-decoration: none;
 }
 .textLink:hover {
-    color: var(--mid-blue);
+    color: var(--accent1);
 }
 .textLink:active {
-    color: var(--bright-blue);
+    color: var(--accent2);
 }
 
 /* Text for the banner */
-.bannerText {
-    color: white;
+.bannerText.centered {
+    text-align: center;
+    margin: auto;
+    padding: 2em;
+
+    color: var(--light);
     font-family: var(--headerFontFamily);
     font-weight: var(--headerFontWeight);
+
+    border: 0.1em solid var(--accent1);
+    border-radius: 1rem;
+    background-color: var(--dark);
 }
 .bannerText h1 {
-    font-size: 4.8rem;
+    font-size: 6rem;
 }
 .bannerText h2 {
-    font-size: 2.8rem;
-}
-.bannerText p {
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 .bannerText hr {
-    border: 0.1rem solid var(--mid-blue);
+    border: 0.1rem solid var(--accent1);
 }
 
 /* Text in the small sections */
 .sectionText {
-    color: white;
+    color: var(--light);
     font-family: var(--bodyFontFamily);
     font-weight: var(--bodyFontWeight);
 }
@@ -328,23 +335,17 @@ footer a:active  > div.iconButton {
 
 /* The banner on the home page */
 #banner {
-    min-height: 40rem;
-    padding: 15vh 5vw;  /* top, right, bottom, left */
+    height: 100vh;
+    padding: 40vh 5vw;  /* top, right, bottom, left */
     background-color: var(--dark);
-    background-image: url("../assets/Banner_1.png");
+    /*background-image: url("../assets/Banner_1.png");*/
     background-repeat: no-repeat;
     background-position: center; /* Center the image */
     background-size: cover; /* Resize the background image to cover the entire box */
 }
 
 .section {
-    padding: 10vh 5vw;
-    background-color: var(--mid);
-}
-.section.midGray {
-    background-color: var(--mid);
-}
-.section.darkGray {
+    padding: 10vh 10vw;
     background-color: var(--dark);
 }
 .section.black {
@@ -414,55 +415,242 @@ footer a:active  > div.iconButton {
     }
 }
 
-/*===============================PROJECT BOX 1 VARIABLES========================*/
+/*===============================LINK BUTTONS & GRID========================*/
 
-.projectBox {
-    min-height: 30rem;
-    padding: 2rem;
-    margin-top: 4rem;
-
-    border: 0.2rem solid var(--light);
+.linkGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+}
+.linkGrid.projectLinks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    gap: 2rem;
+}
+.linkButton {
+    padding: 1rem;
+    border: 0.2rem solid var(--accent1);
     border-radius: 1rem;
+
+    background-color: var(--dark);
+
+    color: var(--light);
+    font-family: var(--headerFontFamily);
+    font-weight: var(--headerFontWeight);
+    font-size: 1.2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 
     cursor: pointer;
 
     transition: all .2s ease-in-out;
     transform: scale(1.0);
 }
-.projectBox h1{
-    color: white;
+.linkButton:hover {
+    background-color: var(--accent1);
+    color: var(--dark);
+    transform: scale(1.05);
+}
+
+/*===============================FILTER BUTTONS & GRID========================*/
+
+.filterGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 2rem;
+    padding-bottom: 4rem;
+}
+.filterButton {
+    padding: 1rem;
+
+    border: 0.2rem solid var(--accent1);
+    border-radius: 1rem;
+
+    background-color: var(--dark);
+
+    color: var(--light);
     font-family: var(--headerFontFamily);
     font-weight: var(--headerFontWeight);
-    text-shadow: 0.1rem 0.2rem 0.4rem #000000;
+    font-size: 1.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    cursor: pointer;
+}
+.filterButton:hover {
+    color: var(--dark);
+    background-color: var(--accent1);
+}
+.filterOn {
+    color: var(--dark);
+    background-color: var(--accent2);
+    border-color: var(--light);
+}
+
+/*===============================PROJECT BOX & GRID========================*/
+
+.projectGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+    gap: 5rem 5rem;
+}
+.projectBox {
+    display: none;
+    height: 40rem;
+
+    border: 0.2rem solid var(--light);
+    border-radius: 1rem;
+    background-color: var(--light);
+
+    cursor: pointer;
+
+    transition: all .2s ease-in-out;
+    transform: scale(1.0);
+}
+.projectBoxImage {
+    border-radius: 1rem 1rem 0rem 0rem;
+    height: 70%;
+    overflow: clip;
+    display: flex;
+    justify-content: center;
+
+    transition: height .2s;
+}
+.projectBoxImage img {
+    display: inline-block;
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.projectBox h1{
+    padding: 2rem;
+
+    color: var(--dark);
+    font-family: var(--bodyFontFamily);
+    font-weight: var(--bodyFontWeight);
+    font-size: 2rem;
+    /* text-shadow: 0.1rem 0.2rem 0.4rem #000000; */
 
     /* transition the font size from small to large on hover */
-    font-size: 2rem;
     transition: font-size .2s;
 }
 .projectBox p {
-    color: white;
-    font-family: var(--headerFontFamily);
-    font-weight: var(--headerFontWeight);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+
+    color: var(--dark);
+    font-family: var(--bodyFontFamily);
+    font-weight: var(--bodyFontWeight);
     font-size: 1.6rem;
 
     /* transition the opacity from none to full on hover */
+    display: none;
     opacity: 0;
     transition: opacity .2s;
 }
-.projectBox.expanded {
+.projectBox:hover {
     cursor: pointer;
-    border: 0.2rem solid var(--mid-blue);
-    transform: scale(1.1);
-
-    /* Darken the background image on hover */
-    background-color: rgba(0, 0, 0, 0.7);
-    background-blend-mode: darken;
+    border: 0.2rem solid var(--accent1);
+    transform: scale(1.05);
+    box-shadow: rgba(18, 20, 22, 0.669) 0px 2px 7px 0px;
 }
-.projectBox.expanded h1 {
-    font-size: 3.6rem;
+.projectBox:hover .projectBoxImage {
+    border-radius: 1rem 1rem 0rem 0rem;
+    height: 30%;
+    overflow: clip;
 }
-.projectBox p.revealed {
+.projectBox:hover p {
+    display: block;
     opacity: 1;
+}
+.filteredOn {
+    display: block;
+}
+
+/*===============================FEATURED PROJECT BOX========================*/
+
+.projectGrid.featured{
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+}
+.featuredProjectBox {
+    height: 60rem;
+
+    border: 0.2rem solid var(--light);
+    border-radius: 1rem;
+    background-color: var(--light);
+
+    cursor: pointer;
+
+    transition: all .2s ease-in-out;
+    transform: scale(1.0);
+}
+.featuredProjectBox h1{
+    padding: 2rem;
+
+    color: var(--dark);
+    font-family: var(--bodyFontFamily);
+    font-weight: var(--bodyFontWeight);
+    font-size: 2rem;
+    /* text-shadow: 0.1rem 0.2rem 0.4rem #000000; */
+
+    /* transition the font size from small to large on hover */
+    transition: font-size .2s;
+}
+.featuredProjectBox p {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+
+    color: var(--dark);
+    font-family: var(--bodyFontFamily);
+    font-weight: var(--bodyFontWeight);
+    font-size: 1.6rem;
+
+    /* transition the opacity from none to full on hover */
+    display: none;
+    opacity: 0;
+    transition: opacity .2s;
+}
+.featuredProjectBox:hover {
+    cursor: pointer;
+    border: 0.2rem solid var(--accent1);
+    transform: scale(1.05);
+    box-shadow: rgba(18, 20, 22, 0.669) 0px 2px 7px 0px;
+}
+.featuredProjectBox:hover .projectBoxImage {
+    border-radius: 1rem 1rem 0rem 0rem;
+    height: 30%;
+    overflow: clip;
+}
+.featuredProjectBox:hover p {
+    display: block;
+    opacity: 1;
+}
+
+/*===============================SOFTWARE ICONS========================*/
+
+.softwareIconGrid {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.softwareIcon {
+    width: 6rem;
+    height: 6rem;
+}
+.softwareIcon img {
+    height: 75%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*===============================LINK BOX VARIABLES========================*/
@@ -471,10 +659,10 @@ footer a:active  > div.iconButton {
     padding: 1rem;
     margin-top: 2rem;
 
-    border: 0.2rem solid var(--light);
+    border: 0.2rem solid var(--accent1);
     border-radius: 1rem;
 
-    background-color: var(--light);
+    background-color: var(--dark);
     text-align: center;
 
     cursor: pointer;
@@ -487,7 +675,7 @@ footer a:active  > div.iconButton {
 }
 
 .linkBox h1{
-    color: white;
+    color: var(--light);
     font-family: var(--headerFontFamily);
     font-weight: var(--headerFontWeight);
 
@@ -496,16 +684,14 @@ footer a:active  > div.iconButton {
     padding: 0;
     transition: font-size .2s;
 }
-.linkBox.expanded {
+.linkBox:hover {
     cursor: pointer;
-    border: 0.2rem solid var(--mid-blue);
+    border: 0.2rem solid var(--accent1);
     transform: scale(1.1);
-
-    /* Darken the background image on hover */
-    background-color: var(--mid);
+    background-color: var(--accent1);
 }
-.linkBox.expanded h1 {
-    color: white;
+.linkBox:hover h1 {
+    color: var(--dark);
     font-size: 2.8rem;
 }
 
@@ -560,11 +746,11 @@ footer a:active  > div.iconButton {
     display: block;
 }
 .thumbnail.current {
-    border: 0.2rem solid var(--mid-blue);
+    border: 0.2rem solid var(--accent1);
 }
 .thumbnail.hover {
     cursor: pointer;
-    border: 0.2rem solid var(--mid-blue);
+    border: 0.2rem solid var(--accent1);
 }
 
 /* Add a pointer when hovering over the thumbnail images */
@@ -576,7 +762,7 @@ footer a:active  > div.iconButton {
 .prevArrow, .nextArrow {
     z-index: 2;
 
-    color: white;
+    color: var(--light);
     font-size: 4.8rem;
 }
 .prevArrow {
@@ -586,131 +772,12 @@ footer a:active  > div.iconButton {
     margin-left: auto;
 }
 .prevArrow:hover, .nextArrow:hover {
-    color: var(--mid-blue);
+    color: var(--accent1);
     cursor: pointer;
 }
 .prevArrow:active, .nextArrow:active {
-    color: var(--bright-blue);
+    color: var(--accent2);
     cursor: pointer;
 }
 
-/*===============================PROJECT BOX ID VARIABLES========================*/
-#projectBox1 {
-    background-image: url("../images/SubjectN06/sn06_10.png");
-    background-repeat: no-repeat;
-    background-position: center; /* Center the image */
-    background-size: cover; /* Resize the background image to cover the entire box */
-}
-#projectBox2 {
-    background-image: url("../images/scootez_1.png");
-    background-repeat: no-repeat;
-    background-position: right; /* Center the image */
-    background-size: cover; /* Resize the background image to cover the entire box */
-}
-#projectBox3 {
-    background-image: url("../images/SolarSystemsDown/ssd_image2.png");
-    background-repeat: no-repeat;
-    background-position: bottom; /* Center the image */
-    background-size: cover; /* Resize the background image to cover the entire box */
-}
-#projectBox4 {
-    background-image: url("../images/RecipeForRevenge/rfr_1.png");
-    background-repeat: no-repeat;
-    background-position: bottom; /* Center the image */
-    background-size: cover; /* Resize the background image to cover the entire box */
-}
-#projectBox5 {
-    background-image: url("../images/Minesweeper/ms_3.jpg");
-    background-repeat: no-repeat;
-    background-position: center; /* Center the image */
-    background-size: cover; /* Resize the background image to cover the entire box */
-}
-#projectBox6 {
-    background-image: url("../images/CampusCompanion_1.png");
-    background-repeat: no-repeat;
-    background-position: center; /* Center the image */
-    background-size: cover; /* Resize the background image to cover the entire box */
-}
-#projectBox7 {
-    background-image: url("../images/PlantFoodScreenshot.png");
-    background-repeat: no-repeat;
-    background-position: center; /* Center the image */
-    background-size: cover; /* Resize the background image to cover the entire box */
-}
-#projectBox8 {
-    background-image: url("../images/NormanFinalFilmScreenshot.png");
-    background-repeat: no-repeat;
-    background-position: center; /* Center the image */
-    background-size: cover; /* Resize the background image to cover the entire box */
-}
-#projectBox9 {
-    background-image: url("../images/QBert_1.png");
-    background-repeat: no-repeat;
-    background-position: center; /* Center the image */
-    background-size: cover; /* Resize the background image to cover the entire box */
-}
-#projectBox10 {
-    background-image: url("../images/DeathStarMotionGraphic_1.png");
-    background-repeat: no-repeat;
-    background-position: center; /* Center the image */
-    background-size: cover; /* Resize the background image to cover the entire box */
-}
-#projectBox11 {
-    background-image: url("../images/Artwork/TapeDispenser_1.png");
-    background-repeat: no-repeat;
-    background-position: center; /* Center the image */
-    background-size: cover; /* Resize the background image to cover the entire box */
-}
-#projectBox12 {
-    background-image: url("../images/Artwork/artwork_3.jpg");
-    background-repeat: no-repeat;
-    background-position: center; /* Center the image */
-    background-size: cover; /* Resize the background image to cover the entire box */
-}
-#projectBox13 {
-    background-image: url("../images/SocialPosts/bmp_2.jpg");
-    background-repeat: no-repeat;
-    background-position: center; /* Center the image */
-    background-size: cover; /* Resize the background image to cover the entire box */
-}
-#projectBox14 {
-    background-image: url("../images/CKI/Enchanted_forest_art_4.jpg");
-    background-repeat: no-repeat;
-    background-position: center; /* Center the image */
-    background-size: cover; /* Resize the background image to cover the entire box */
-}
-#projectBox15 {
-    background-image: url("../images/NutritionNexus_1.png");
-    background-repeat: no-repeat;
-    background-position: top; /* Center the image */
-    background-size: cover; /* Resize the background image to cover the entire box */
-}
-#projectBox24 {
-    background-image: url("../images/WizardOrbEscape/woe_3.png");
-    background-repeat: no-repeat;
-    background-position: bottom; /* Center the image */
-    background-size: cover; /* Resize the background image to cover the entire box */
-}
-#projectBox25 {
-    background-image: url("../images/Artistree_2.png");
-    background-repeat: no-repeat;
-    background-position: top; /* Center the image */
-    background-size: cover; /* Resize the background image to cover the entire box */
-}
-#projectBox26 {
-    background-image: url("../images/HandwritingOCR/ocr_2.png");
-    background-repeat: no-repeat;
-    background-position: center; /* Center the image */
-    background-size: cover; /* Resize the background image to cover the entire box */
-}
-#projectBox27 {
-    background-image: url("../images/GigglesGoofyGameshow/ggg_1.png");
-    background-repeat: no-repeat;
-    background-position: center; /* Center the image */
-    background-size: cover; /* Resize the background image to cover the entire box */
-}
-/*we're up to box 30*/
-
-
-/*===============================HANDLE DIFFERENT SCREEN SIZES========================*/
 
