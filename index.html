@@ -110,16 +110,14 @@
             <div id="portfolio" class="section">
                 <div class="sectionText"><h1>Portfolio</h1></div>
                 <div class="filterGrid">
-                    <div id="all" class="filterButton filterOn" onclick="ToggleFilter('all')">All</div>
-                    <div id="gameDev" class="filterButton" onclick="ToggleFilter('gameDev')">Game Development</div>
-                    <div id="software" class="filterButton" onclick="ToggleFilter('software')">Software Development</div>
-                    <div id="graphics" class="filterButton" onclick="ToggleFilter('graphics')">Computer Graphics</div>
-                    <div id="anim" class="filterButton" onclick="ToggleFilter('anim')">Animation</div>
-                    <div id="ux" class="filterButton" onclick="ToggleFilter('ux')">UX</div>
-                    <div id="model" class="filterButton" onclick="ToggleFilter('model')">3D Modeling</div>
-                    <div id="illu" class="filterButton" onclick="ToggleFilter('illu')">Illustration</div>
-                    <div id="design" class="filterButton" onclick="ToggleFilter('design')">Graphic / Web Design</div>
+                    <div class="filterButton" onclick="ScrollToSection('gameDev')">Game Development</div>
+                    <div class="filterButton" onclick="ScrollToSection('software')">Software Development</div>
+                    <!-- <div id="graphics" class="filterButton" onclick="ScrollToSection('graphics')">Computer Graphics</div> -->
+                    <div class="filterButton" onclick="ScrollToSection('anim')">Animation</div>
+                    <div class="filterButton" onclick="ScrollToSection('ux')">UX</div>
+                    <div class="filterButton" onclick="ScrollToSection('art')">3D / Illustration / Design</div>
                 </div>
+                <div id="gameDev" class="sectionText"><br><br><h3>Game Development</h3><br></div>
                 <div class="projectGrid">
                     <div id="GGG_box" class="projectBox gameDev model filteredOn" onclick="NavigationButton('pages/gameDevelopment/gigglesGoofyGameshow.html')">
                         <div class="projectBoxImage"><img src="images/GigglesGoofyGameshow/ggg_1.png"></div>
@@ -136,33 +134,6 @@
                             <div class="softwareIcon"><img src="assets/substancePaintIcon.svg" alt="Substance Painter icon" /></div>
                             <div class="softwareIcon"><img src="assets/photoshopIcon.svg" alt="Adobe Photoshop icon" /></div>
                             <div class="softwareIcon"><img src="assets/illustratorIcon.svg" alt="Adobe Illustrator icon" /></div>
-                        </div>
-                    </div>
-                <!--
-                    <div id="wirebot_box" class="projectBox gameDev software model filteredOn" onclick="NavigationButton('pages/gameDevelopment/gigglesGoofyGameshow.html')">
-                        <div class="projectBoxImage"><img src=""></div>
-                        <h1>Wirebot</h1>
-                        <p>
-                            ...
-                        </p>
-                        <div class="softwareIconGrid">
-                            <div class="softwareIcon"><img src="assets/CPlusPlusIcon.svg" alt="C++ icon" /></div>
-                            <div class="softwareIcon"><img src="assets/openglIcon.svg" alt="OpenGL icon" /></div>
-                        </div>
-                    </div>
-                -->
-                    <div id="ScootEZ_box" class="projectBox software filteredOn" onclick="NavigationButton('pages/software/scootez.html')">
-                        <div class="projectBoxImage"><img src="images/scootez_1.png"></div>
-                        <h1>ScootEZ</h1>
-                        <p>
-                            A MERN stack electric scooter rental website application developed
-                            in a team of four over four weeks.
-                        </p>
-                        <div class="softwareIconGrid">
-                            <div class="softwareIcon"><img src="assets/reactIcon.svg" alt="React icon" /></div>
-                            <div class="softwareIcon"><img src="assets/javascriptIcon.svg" alt="JavaScript icon" /></div>
-                            <div class="softwareIcon"><img src="assets/nodejsIcon.svg" alt="Node JS icon" /></div>
-                            <div class="softwareIcon"><img src="assets/mongodbIcon.svg" alt="MongoDB icon" /></div>
                         </div>
                     </div>
                     <div id="WOE_box" class="projectBox gameDev model filteredOn" onclick="NavigationButton('pages/gameDevelopment/wizardOrbEscape.html')">
@@ -205,6 +176,17 @@
                             <div class="softwareIcon"><img src="assets/cSharpIcon.svg" alt="C# icon" /></div>
                         </div>
                     </div>
+                    <div id="Minesweeper_box" class="projectBox gameDev software filteredOn" onclick="NavigationButton('pages/gameDevelopment/minesweeper.html')">
+                        <div class="projectBoxImage"><img src="images/Minesweeper/ms_3.jpg"></div>  
+                        <h1>Minesweeper</h1>
+                        <p>
+                            The classic Minesweeper game coded in C++ using the SFML library.
+                        </p>
+                        <div class="softwareIconGrid">
+                            <div class="softwareIcon"><img src="assets/CPlusPlusIcon.svg" alt="C++ icon" /></div>
+                            <div class="softwareIcon"><img src="assets/sfmlIcon.svg" alt="C++ icon" /></div>
+                        </div>
+                    </div>
                     <div id="RfR_box" class="projectBox gameDev illu filteredOn" onclick="NavigationButton('pages/gameDevelopment/recipeForRevenge.html')">
                         <div class="projectBoxImage"><img src="images/RecipeForRevenge/rfr_1.png"></div>  
                         <h1>Recipe for Revenge</h1>
@@ -218,15 +200,35 @@
                             <div class="softwareIcon"><img src="assets/pixilartIcon.svg" alt="Pixilart icon" /></div>
                         </div>
                     </div>
-                    <div id="Minesweeper_box" class="projectBox gameDev software filteredOn" onclick="NavigationButton('pages/gameDevelopment/minesweeper.html')">
-                        <div class="projectBoxImage"><img src="images/Minesweeper/ms_3.jpg"></div>  
-                        <h1>Minesweeper</h1>
+                </div>
+                <!-- <div id="grpahics" class="sectionText"><br><br><h3>Computer Graphics</h3><br></div>
+                <div class="projectGrid">
+                    <div id="wirebot_box" class="projectBox gameDev software model filteredOn" onclick="NavigationButton('pages/gameDevelopment/gigglesGoofyGameshow.html')">
+                        <div class="projectBoxImage"><img src=""></div>
+                        <h1>Wirebot</h1>
                         <p>
-                            The classic Minesweeper game coded in C++ using the SFML library.
+                            ...
                         </p>
                         <div class="softwareIconGrid">
                             <div class="softwareIcon"><img src="assets/CPlusPlusIcon.svg" alt="C++ icon" /></div>
-                            <div class="softwareIcon"><img src="assets/sfmlIcon.svg" alt="C++ icon" /></div>
+                            <div class="softwareIcon"><img src="assets/openglIcon.svg" alt="OpenGL icon" /></div>
+                        </div>
+                    </div>
+                </div> -->
+                <div id="software" class="sectionText"><br><br><h3>Software Development</h3><br></div>
+                <div class="projectGrid">
+                    <div id="ScootEZ_box" class="projectBox software filteredOn" onclick="NavigationButton('pages/software/scootez.html')">
+                        <div class="projectBoxImage"><img src="images/scootez_1.png"></div>
+                        <h1>ScootEZ</h1>
+                        <p>
+                            A MERN stack electric scooter rental website application developed
+                            in a team of four over four weeks.
+                        </p>
+                        <div class="softwareIconGrid">
+                            <div class="softwareIcon"><img src="assets/reactIcon.svg" alt="React icon" /></div>
+                            <div class="softwareIcon"><img src="assets/javascriptIcon.svg" alt="JavaScript icon" /></div>
+                            <div class="softwareIcon"><img src="assets/nodejsIcon.svg" alt="Node JS icon" /></div>
+                            <div class="softwareIcon"><img src="assets/mongodbIcon.svg" alt="MongoDB icon" /></div>
                         </div>
                     </div>
                     <div id="NN_box" class="projectBox software design filteredOn" onclick="NavigationButton('pages/software/nutritionNexus.html')">
@@ -251,6 +253,9 @@
                             <div class="softwareIcon"><img src="assets/pythonIcon.svg" alt="Python icon" /></div>
                         </div>
                     </div>
+                </div>
+                <div id="ux" class="sectionText"><br><br><h3>User Experience Design</h3><br></div>
+                <div class="projectGrid">
                     <div id="CC_box" class="projectBox ux design filteredOn" onclick="NavigationButton('pages/userExperience/campusCompanion.html')">
                         <div class="projectBoxImage"><img src="images/CampusCompanion_1.png"></div> 
                         <h1>Campus Companion</h1>
@@ -272,6 +277,9 @@
                             <div class="softwareIcon"><img src="assets/figmaIcon.svg" alt="Figma icon" /></div>
                         </div>
                     </div>
+                </div>
+                <div id="anim" class="sectionText"><br><br><h3>Animation</h3><br></div>
+                <div class="projectGrid">
                     <div id="PlantFood_box" class="projectBox anim illu filteredOn" onclick="NavigationButton('pages/digitalArt/plantFood.html')">
                         <div class="projectBoxImage"><img src="images/PlantFoodScreenshot.png"></div> 
                         <h1>Plant Food</h1>
@@ -309,17 +317,6 @@
                             <div class="softwareIcon"><img src="assets/mayaIcon.svg" alt="Autodesk Maya icon" /></div>
                         </div>
                     </div>
-                    <div id="Modeling3D_box" class="projectBox model filteredOn" onclick="NavigationButton('pages/digitalArt/modeling.html')">
-                        <div class="projectBoxImage"><img src="images/Artwork/TapeDispenser_3.png"></div> 
-                        <h1>3D modeling</h1>
-                        <p>
-                            A 3D modeling project using Autodesk Maya involving the full process from reference to rendering.
-                        </p>
-                        <div class="softwareIconGrid">
-                            <div class="softwareIcon"><img src="assets/mayaIcon.svg" alt="Autodesk Maya icon" /></div>
-                            <div class="softwareIcon"><img src="assets/photoshopIcon.svg" alt="Adobe Photoshop icon" /></div>
-                        </div>
-                    </div>
                     <div id="MotionGraphics_box" class="projectBox anim filteredOn" onclick="NavigationButton('pages/digitalArt/motionGraphics.html')">
                         <div class="projectBoxImage"><img src="images/DeathStarMotionGraphic_1.png"></div> 
                         <h1>Motion Graphics</h1>
@@ -330,6 +327,20 @@
                         <div class="softwareIconGrid">
                             <div class="softwareIcon"><img src="assets/afterEffectsIcon.svg" alt="Adobe After Effects icon" /></div>
                             <div class="softwareIcon"><img src="assets/illustratorIcon.svg" alt="Adobe Illustrator icon" /></div>
+                            <div class="softwareIcon"><img src="assets/photoshopIcon.svg" alt="Adobe Photoshop icon" /></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="art" class="sectionText"><br><br><h3>Digital Art / Design</h3><br></div>
+                <div class="projectGrid">
+                    <div id="Modeling3D_box" class="projectBox model filteredOn" onclick="NavigationButton('pages/digitalArt/modeling.html')">
+                        <div class="projectBoxImage"><img src="images/Artwork/TapeDispenser_3.png"></div> 
+                        <h1>3D modeling</h1>
+                        <p>
+                            A 3D modeling project using Autodesk Maya involving the full process from reference to rendering.
+                        </p>
+                        <div class="softwareIconGrid">
+                            <div class="softwareIcon"><img src="assets/mayaIcon.svg" alt="Autodesk Maya icon" /></div>
                             <div class="softwareIcon"><img src="assets/photoshopIcon.svg" alt="Adobe Photoshop icon" /></div>
                         </div>
                     </div>
@@ -345,16 +356,6 @@
                             <div class="softwareIcon"><img src="assets/illustratorIcon.svg" alt="Adobe Illustrator icon" /></div>
                         </div>
                     </div>
-                    <div id="SocialMedia_box" class="projectBox design illu filteredOn" onclick="NavigationButton('pages/digitalArt/socialMedia.html')">
-                        <div class="projectBoxImage"><img src="images/SocialPosts/bmp_2.jpg"></div> 
-                        <h1>Social Media</h1>
-                        <p>
-                            Original graphics created for the BADAS Mentorship Program's social media.
-                        </p>
-                        <div class="softwareIconGrid">
-                            <div class="softwareIcon"><img src="assets/photoshopIcon.svg" alt="Adobe Photoshop icon" /></div>
-                        </div>
-                    </div>
                     <div id="CKI_box" class="projectBox illu design filteredOn" onclick="NavigationButton('pages/digitalArt/ckiWebsite.html')">
                         <div class="projectBoxImage"><img src="images/CKI/Enchanted_forest_art_4.jpg"></div> 
                         <h1>UF CKI Website</h1>
@@ -362,6 +363,16 @@
                             As 2024-25 webmaster of the University of Florida chapter of Circle K Intermational,
                             the collegiate branch of Kiwanis, I designed the website and created original artwork
                             and assets for it.
+                        </p>
+                        <div class="softwareIconGrid">
+                            <div class="softwareIcon"><img src="assets/photoshopIcon.svg" alt="Adobe Photoshop icon" /></div>
+                        </div>
+                    </div>
+                    <div id="SocialMedia_box" class="projectBox design illu filteredOn" onclick="NavigationButton('pages/digitalArt/socialMedia.html')">
+                        <div class="projectBoxImage"><img src="images/SocialPosts/bmp_2.jpg"></div> 
+                        <h1>Social Media</h1>
+                        <p>
+                            Original graphics created for the BADAS Mentorship Program's social media.
                         </p>
                         <div class="softwareIconGrid">
                             <div class="softwareIcon"><img src="assets/photoshopIcon.svg" alt="Adobe Photoshop icon" /></div>

@@ -492,6 +492,7 @@ footer a:active  > div.iconButton {
 /*===============================LINK BUTTONS & GRID========================*/
 
 .linkGrid {
+    flex: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap: 2rem;
@@ -571,6 +572,7 @@ footer a:active  > div.iconButton {
 /*===============================PROJECT BOX & GRID========================*/
 
 .projectGrid {
+    flex: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
     gap: 5rem 5rem;
