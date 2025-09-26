@@ -76,6 +76,20 @@
                             <div class="softwareIcon"><img src="assets/illustratorIcon.svg" alt="Adobe Illustrator icon" /></div>
                         </div>
                     </div>
+                    <div id="featured_RobotArm_box" class="featuredProjectBox"
+                    onclick="NavigationButton('pages/gameDevelopment/robotArm.html')">
+                        <div class="projectBoxImage"><img src="images/robotarm_1.png"></div>
+                        <h1>Robot Arm OpenGL Project</h1>
+                        <p>
+                            An interactive robot arm with a joint which moves and rotates on a XZ plane, and a projectile shoot with teleportation. This project
+                            was made with OpenGL focused on affine hierarchical transformations, drawing and lighting with shaders.
+                        </p>
+                        <div class="softwareIconGrid">
+                            <div class="softwareIcon"><img src="assets/CPlusPlusIcon.svg" alt="C++ icon" /></div>
+                            <div class="softwareIcon"><img src="assets/GLSLIcon.svg" alt="GLSL icon" /></div>
+                            <div class="softwareIcon"><img src="assets/openglIcon.svg" alt="OpenGL icon" /></div>
+                        </div>
+                    </div>
                     <div id="featured_ScootEZ_box" class="featuredProjectBox"
                     onclick="NavigationButton('pages/software/scootez.html')">
                         <div class="projectBoxImage"><img src="images/scootez_1.png"></div>
@@ -91,20 +105,6 @@
                             <div class="softwareIcon"><img src="assets/mongodbIcon.svg" alt="MongoDB icon" /></div>
                         </div>
                     </div>
-                    <div id="featured_WOE_box" class="featuredProjectBox"
-                    onclick="NavigationButton('pages/gameDevelopment/wizardOrbEscape.html')">
-                        <div class="projectBoxImage"><img src="images/WizardOrbEscape/woe_3.png"></div>
-                        <h1>Wizard Orb Escape</h1>
-                        <p>
-                            A 3D puzzle game demo made with Unity in which an evil spirit must escape the wizard's
-                            keep by bending a magic light beam to open the door.
-                        </p>
-                        <div class="softwareIconGrid">
-                            <div class="softwareIcon"><img src="assets/unityIcon.svg" alt="Unity icon" /></div>
-                            <div class="softwareIcon"><img src="assets/cSharpIcon.svg" alt="C# icon" /></div>
-                            <div class="softwareIcon"><img src="assets/mayaIcon.svg" alt="Autodesk Maya icon" /></div>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div id="portfolio" class="section">
@@ -112,10 +112,8 @@
                 <div class="filterGrid">
                     <div class="filterButton" onclick="ScrollToSection('gameDev')">Game Development</div>
                     <div class="filterButton" onclick="ScrollToSection('software')">Software Development</div>
-                    <!-- <div id="graphics" class="filterButton" onclick="ScrollToSection('graphics')">Computer Graphics</div> -->
+                    <div class="filterButton" onclick="ScrollToSection('art')">3D / Illustration / UX Design</div>
                     <div class="filterButton" onclick="ScrollToSection('anim')">Animation</div>
-                    <div class="filterButton" onclick="ScrollToSection('ux')">UX</div>
-                    <div class="filterButton" onclick="ScrollToSection('art')">3D / Illustration / Design</div>
                 </div>
                 <div id="gameDev" class="sectionText"><br><br><h3>Game Development</h3><br></div>
                 <div class="projectGrid">
@@ -163,17 +161,17 @@
                             <div class="softwareIcon"><img src="assets/illustratorIcon.svg" alt="Adobe Illustrator icon" /></div>
                         </div>
                     </div>
-                    <div id="SSD_box" class="projectBox gameDev filteredOn" onclick="NavigationButton('pages/gameDevelopment/solarSystemsDown.html')">
-                        <div class="projectBoxImage"><img src="images/SolarSystemsDown/ssd_image2.png"></div>    
-                        <h1>Solar Systems Down</h1>
+                    <div id="RobotArm_box" class="projectBox software filteredOn" onclick="NavigationButton('pages/gameDevelopment/robotArm.html')">
+                        <div class="projectBoxImage"><img src="images/robotarm_1.png"></div>
+                        <h1>Robot Arm OpenGL Project</h1>
                         <p>
-                            A 2D pixel art adventure shooter made with Unity for the 2024 FIEA Game Jam
-                            in which you play as the nomadic solar systems engineer Sol, living in a post-apocalytic,
-                            solar-punk world and fighting evil sludge.
+                            An interactive robot arm with a joint which moves and rotates on a XZ plane, and a projectile shoot with teleportation. This project
+                            was made with OpenGL focused on affine hierarchical transformations, drawing and lighting with shaders.
                         </p>
                         <div class="softwareIconGrid">
-                            <div class="softwareIcon"><img src="assets/unityIcon.svg" alt="Unity icon" /></div>
-                            <div class="softwareIcon"><img src="assets/cSharpIcon.svg" alt="C# icon" /></div>
+                            <div class="softwareIcon"><img src="assets/CPlusPlusIcon.svg" alt="C++ icon" /></div>
+                            <div class="softwareIcon"><img src="assets/GLSLIcon.svg" alt="GLSL icon" /></div>
+                            <div class="softwareIcon"><img src="assets/openglIcon.svg" alt="OpenGL icon" /></div>
                         </div>
                     </div>
                     <div id="Minesweeper_box" class="projectBox gameDev software filteredOn" onclick="NavigationButton('pages/gameDevelopment/minesweeper.html')">
@@ -185,6 +183,19 @@
                         <div class="softwareIconGrid">
                             <div class="softwareIcon"><img src="assets/CPlusPlusIcon.svg" alt="C++ icon" /></div>
                             <div class="softwareIcon"><img src="assets/sfmlIcon.svg" alt="C++ icon" /></div>
+                        </div>
+                    </div>
+                    <div id="SSD_box" class="projectBox gameDev filteredOn" onclick="NavigationButton('pages/gameDevelopment/solarSystemsDown.html')">
+                        <div class="projectBoxImage"><img src="images/SolarSystemsDown/ssd_image2.png"></div>    
+                        <h1>Solar Systems Down</h1>
+                        <p>
+                            A 2D pixel art adventure shooter made with Unity for the 2024 FIEA Game Jam
+                            in which you play as the nomadic solar systems engineer Sol, living in a post-apocalytic,
+                            solar-punk world and fighting evil sludge.
+                        </p>
+                        <div class="softwareIconGrid">
+                            <div class="softwareIcon"><img src="assets/unityIcon.svg" alt="Unity icon" /></div>
+                            <div class="softwareIcon"><img src="assets/cSharpIcon.svg" alt="C# icon" /></div>
                         </div>
                     </div>
                     <div id="RfR_box" class="projectBox gameDev illu filteredOn" onclick="NavigationButton('pages/gameDevelopment/recipeForRevenge.html')">
@@ -201,20 +212,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div id="grpahics" class="sectionText"><br><br><h3>Computer Graphics</h3><br></div>
-                <div class="projectGrid">
-                    <div id="wirebot_box" class="projectBox gameDev software model filteredOn" onclick="NavigationButton('pages/gameDevelopment/gigglesGoofyGameshow.html')">
-                        <div class="projectBoxImage"><img src=""></div>
-                        <h1>Wirebot</h1>
-                        <p>
-                            ...
-                        </p>
-                        <div class="softwareIconGrid">
-                            <div class="softwareIcon"><img src="assets/CPlusPlusIcon.svg" alt="C++ icon" /></div>
-                            <div class="softwareIcon"><img src="assets/openglIcon.svg" alt="OpenGL icon" /></div>
-                        </div>
-                    </div>
-                </div> -->
                 <div id="software" class="sectionText"><br><br><h3>Software Development</h3><br></div>
                 <div class="projectGrid">
                     <div id="ScootEZ_box" class="projectBox software filteredOn" onclick="NavigationButton('pages/software/scootez.html')">
@@ -254,8 +251,19 @@
                         </div>
                     </div>
                 </div>
-                <div id="ux" class="sectionText"><br><br><h3>User Experience Design</h3><br></div>
+                                <div id="art" class="sectionText"><br><br><h3>Digital Art / UX Design</h3><br></div>
                 <div class="projectGrid">
+                    <div id="Modeling3D_box" class="projectBox model filteredOn" onclick="NavigationButton('pages/digitalArt/modeling.html')">
+                        <div class="projectBoxImage"><img src="images/Artwork/TapeDispenser_3.png"></div> 
+                        <h1>3D modeling</h1>
+                        <p>
+                            A 3D modeling project using Autodesk Maya involving the full process from reference to rendering.
+                        </p>
+                        <div class="softwareIconGrid">
+                            <div class="softwareIcon"><img src="assets/mayaIcon.svg" alt="Autodesk Maya icon" /></div>
+                            <div class="softwareIcon"><img src="assets/photoshopIcon.svg" alt="Adobe Photoshop icon" /></div>
+                        </div>
+                    </div>
                     <div id="CC_box" class="projectBox ux design filteredOn" onclick="NavigationButton('pages/userExperience/campusCompanion.html')">
                         <div class="projectBoxImage"><img src="images/CampusCompanion_1.png"></div> 
                         <h1>Campus Companion</h1>
@@ -267,6 +275,30 @@
                             <div class="softwareIcon"><img src="assets/figmaIcon.svg" alt="Figma icon" /></div>
                         </div>
                     </div>
+                    <div id="CKI_box" class="projectBox illu design filteredOn" onclick="NavigationButton('pages/digitalArt/ckiWebsite.html')">
+                        <div class="projectBoxImage"><img src="images/CKI/Enchanted_forest_art_4.jpg"></div> 
+                        <h1>UF CKI Website</h1>
+                        <p>
+                            As 2024-25 webmaster of the University of Florida chapter of Circle K Intermational,
+                            the collegiate branch of Kiwanis, I designed the website and created original artwork
+                            and assets for it.
+                        </p>
+                        <div class="softwareIconGrid">
+                            <div class="softwareIcon"><img src="assets/photoshopIcon.svg" alt="Adobe Photoshop icon" /></div>
+                        </div>
+                    </div>
+                    <div id="Illustration_box" class="projectBox illu filteredOn" onclick="NavigationButton('pages/digitalArt/graphics.html')">
+                        <div class="projectBoxImage"><img src="images/Artwork/artwork_3.JPG"></div> 
+                        <h1>Illustrations / Graphics / Infographics</h1>
+                        <p>
+                            Various digital drawings illustrations, and infographics as part of multiple
+                            projects over the years for course work and personal studies.
+                        </p>
+                        <div class="softwareIconGrid">
+                            <div class="softwareIcon"><img src="assets/photoshopIcon.svg" alt="Adobe Photoshop icon" /></div>
+                            <div class="softwareIcon"><img src="assets/illustratorIcon.svg" alt="Adobe Illustrator icon" /></div>
+                        </div>
+                    </div>
                     <div id="Artistree_box" class="projectBox ux design filteredOn" onclick="NavigationButton('pages/userExperience/artistree.html')">
                         <div class="projectBoxImage"><img src="images/Artistree_2.png"></div> 
                         <h1>Artistree</h1>
@@ -275,6 +307,16 @@
                         </p>
                         <div class="softwareIconGrid">
                             <div class="softwareIcon"><img src="assets/figmaIcon.svg" alt="Figma icon" /></div>
+                        </div>
+                    </div>
+                    <div id="SocialMedia_box" class="projectBox design illu filteredOn" onclick="NavigationButton('pages/digitalArt/socialMedia.html')">
+                        <div class="projectBoxImage"><img src="images/SocialPosts/bmp_2.jpg"></div> 
+                        <h1>Social Media</h1>
+                        <p>
+                            Original graphics created for the BADAS Mentorship Program's social media.
+                        </p>
+                        <div class="softwareIconGrid">
+                            <div class="softwareIcon"><img src="assets/photoshopIcon.svg" alt="Adobe Photoshop icon" /></div>
                         </div>
                     </div>
                 </div>
@@ -331,57 +373,10 @@
                         </div>
                     </div>
                 </div>
-                <div id="art" class="sectionText"><br><br><h3>Digital Art / Design</h3><br></div>
-                <div class="projectGrid">
-                    <div id="Modeling3D_box" class="projectBox model filteredOn" onclick="NavigationButton('pages/digitalArt/modeling.html')">
-                        <div class="projectBoxImage"><img src="images/Artwork/TapeDispenser_3.png"></div> 
-                        <h1>3D modeling</h1>
-                        <p>
-                            A 3D modeling project using Autodesk Maya involving the full process from reference to rendering.
-                        </p>
-                        <div class="softwareIconGrid">
-                            <div class="softwareIcon"><img src="assets/mayaIcon.svg" alt="Autodesk Maya icon" /></div>
-                            <div class="softwareIcon"><img src="assets/photoshopIcon.svg" alt="Adobe Photoshop icon" /></div>
-                        </div>
-                    </div>
-                    <div id="Illustration_box" class="projectBox illu filteredOn" onclick="NavigationButton('pages/digitalArt/graphics.html')">
-                        <div class="projectBoxImage"><img src="images/Artwork/artwork_3.JPG"></div> 
-                        <h1>Illustrations / Graphics / Infographics</h1>
-                        <p>
-                            Various digital drawings illustrations, and infographics as part of multiple
-                            projects over the years for course work and personal studies.
-                        </p>
-                        <div class="softwareIconGrid">
-                            <div class="softwareIcon"><img src="assets/photoshopIcon.svg" alt="Adobe Photoshop icon" /></div>
-                            <div class="softwareIcon"><img src="assets/illustratorIcon.svg" alt="Adobe Illustrator icon" /></div>
-                        </div>
-                    </div>
-                    <div id="CKI_box" class="projectBox illu design filteredOn" onclick="NavigationButton('pages/digitalArt/ckiWebsite.html')">
-                        <div class="projectBoxImage"><img src="images/CKI/Enchanted_forest_art_4.jpg"></div> 
-                        <h1>UF CKI Website</h1>
-                        <p>
-                            As 2024-25 webmaster of the University of Florida chapter of Circle K Intermational,
-                            the collegiate branch of Kiwanis, I designed the website and created original artwork
-                            and assets for it.
-                        </p>
-                        <div class="softwareIconGrid">
-                            <div class="softwareIcon"><img src="assets/photoshopIcon.svg" alt="Adobe Photoshop icon" /></div>
-                        </div>
-                    </div>
-                    <div id="SocialMedia_box" class="projectBox design illu filteredOn" onclick="NavigationButton('pages/digitalArt/socialMedia.html')">
-                        <div class="projectBoxImage"><img src="images/SocialPosts/bmp_2.jpg"></div> 
-                        <h1>Social Media</h1>
-                        <p>
-                            Original graphics created for the BADAS Mentorship Program's social media.
-                        </p>
-                        <div class="softwareIconGrid">
-                            <div class="softwareIcon"><img src="assets/photoshopIcon.svg" alt="Adobe Photoshop icon" /></div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
         <footer>
+            <p>Copyright © 2025 Jaidyn Holt</p>
             <a href="https://github.com/jaidynholt" target="_blank">
                 <div class="iconButton">
                     <img class="icon" src="assets/githubIcon.svg" alt="GitHub link" />

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <title>Robot Arm | Jaidyn Holt Portfolio</title>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../../src/index.js"></script>
+    <body>
+        <nav id="navBar" class="navBar">
+            <ul>
+                <li class="logo"><a href="../../index.html" target="_self">JAIDYN HOLT</a></li>
+                <div class="navBarToggle">
+                    <li><a href="../../index.html" target="_self">Home</a></li>
+                    <li><a href="../../index.html#portfolio" target="_self">Portfolio</a></li>
+                    <li><a href="../contact.html" target="_self">Contact</a></li>
+                </div>
+            </ul>
+            <button id="navButton" class="navBarMenuButton" onClick="ToggleNavBar()">
+                <div class="menuIconOpen">
+                    <svg  xmlns="http://www.w3.org/2000/svg"
+                    width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <line x1="4" y1="6" x2="20" y2="6" />
+                        <line x1="4" y1="12" x2="20" y2="12" />
+                        <line x1="4" y1="18" x2="20" y2="18" />
+                    </svg>
+                </div>
+                <div class="menuIconClose">
+                    <svg  xmlns="http://www.w3.org/2000/svg"
+                    width="24"  height="24"  viewBox="0 0 24 24"  fill="none"
+                    stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-x">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M18 6l-12 12" />
+                        <path d="M6 6l12 12" />
+                    </svg>
+                </div>
+            </button>
+        </nav>
+        <div id="toTop" class="toTopButton invisible" onClick="ScrollToPosition(0)">
+            <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170.05 113.31">
+                <g id="Layer_1-2" data-name="Layer 1">
+                    <path class="cls-1" d="m74.04,4.54L7.19,71.39c-9.59,9.59-9.59,25.14,0,34.73h0c9.59,9.59,25.14,9.59,34.73,0l35.86-35.86c4.02-4.02,10.53-4.02,14.54,0l35.81,35.81c9.59,9.59,25.13,9.59,34.72,0h0c9.59-9.59,9.59-25.14,0-34.73L95.97,4.54c-6.06-6.05-15.88-6.05-21.94,0Z"/>
+                </g>
+            </svg>
+        </div>
+        <div id="minArea">
+            <div class="padding"></div>
+            <div class="section">
+                <div class="sectionText">
+                    <h1>Robot Arm OpenGL Project</h1>
+                    <h3>2025</h3><br>
+                    <p>
+                        An interactive robot arm with a joint which moves and rotates on a XZ plane and shoots a projectile, teleporting to where it lands.<br>
+                        This is my first project made with OpenGL and focuses on affine hierarchical transformations, drawing, and lighting with shaders.<br>
+                        See the full project description and code on GitHub!
+                    </p>
+                    <p>
+                        See & build the complete project on GitHub:<br>
+                        <a class="textLink" href="https://github.com/jaidynholt/OpenGLProject1_RobotArm" target="_blank">
+                            https://github.com/jaidynholt/OpenGLProject1_RobotArm
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="videoBanner">
+                <div class="videoDiv"><iframe
+                    src="https://drive.google.com/file/d/1Qd4txc7UOU0SCn9braXY3lt-oLxisPqE/preview"
+                    width="640" height="480" marginHeight="0" marginWidth="0" allow="autoplay" allowfullscreen>Loading...
+                </iframe></div>
+            </div>
+            <div class="section">
+                <div class="sectionText"><h2>Project & Code Walkthrough</h2></div>
+            </div>
+            <div class="videoBanner">
+                <div class="videoDiv"><iframe
+                    src="https://drive.google.com/file/d/1t_JAfuz8TDr1Q1ywfGFKiqr8xcYWEZFK/preview"
+                    width="640" height="480" marginHeight="0" marginWidth="0" allow="autoplay" allowfullscreen>Loading...
+                </iframe></div>
+            </div>
+            <div class="section">
+                <div class="sectionText">
+                    <h2>Features</h2>
+                    <h3>Interactivity</h3>
+                    <p>The camera is fixed looking at the origin and moves around the origin in a sphere:</p>
+                    <ul>
+                        <li><b style="color:#4EC9B0">Select camera</b>: press c key</li>
+                        <li><b style="color:#4EC9B0">Move camera</b>: press ← → ↑ ↓ keys</li>
+                    </ul>
+                    <p>The robot can move and rotate on the XZ plane:</p>
+                    <ul>
+                        <li><b style="color:#4EC9B0">Select robot base to move</b>: press t key</li>
+                        <li><b style="color:#4EC9B0">Move robot base</b>: press ← → ↑ ↓ keys</li>
+                        <li><b style="color:#4EC9B0">Select robot base to rotate</b>: L mouse click on it or press r key</li>
+                        <li><b style="color:#4EC9B0">Rotate robot base</b>: press ← → keys</li>
+                    </ul>
+                    <p>The two arm segments can rotate:</p>
+                    <ul>
+                        <li><b style="color:#4EC9B0">Select arm segment 1</b>: L mouse click on it or press 1 key</li>
+                        <li><b style="color:#4EC9B0">Select arm segment 2</b>: L mouse click on it or press 2 key</li>
+                        <li><b style="color:#4EC9B0">Rotate arm segment</b>: press ↑ ↓ keys</li>
+                    </ul>
+                    <p>The robot can shoot a projectile out of its arm (with force equal to its length) and teleport to where it lands:</p>
+                    <ul>
+                        <li><b style="color:#4EC9B0">Shoot projectile</b>: press s key</li>
+                    </ul><br><br>
+                    <h3>Hierarchical Transformations</h3>
+                    <p>
+                        Each MeshObject contains its own model matrix (4x4 matrix) and translate (vector 3) and rotate (quaternion).
+                        Each can optionally contain MeshObject children. When a transform is applied to a
+                        MeshObject, its translate or rotate is updated. Each time its world model matrix is needed (such as for drawing),
+                        its translate and rotate and all its predecessors' translates and rotates are applied to its model matrix.<br>
+                    </p><br><br>
+                    <h3>Drawing</h3>
+                    <p>
+                        Each MeshObject contains its <b style="color:#4EC9B0">vertex array object (VAO)</b> and
+                        <b style="color:#4EC9B0">vertex buffer objects (VBO)</b> for its vertices, uvs, and normals. Its model is loaded from an OBJ file
+                        and its data is sent to the buffers for the GPU to render.<br>
+                        The models for the project were made and exported in Maya.
+                    </p><br><br>
+                    <h3>Lighting</h3>
+                    <p>
+                        There are two lights in the scene: red and blue. The lights are represented as positions with values for
+                        their various components which the shader uses to approximate raycast light:
+                    </p>
+                    <ul>
+                        <li><b style="color:#4EC9B0">Diffuse light</b>: Light that hits an object and disperses, effectively coloring the
+                            object in areas reachable from the light's position and attenuating with distance. Its strength is determined using the 
+                            angle between the incident light vector and the normal, where the smaller the angle, the more light is seen.
+                        </li>
+                        <li><b style="color:#4EC9B0">Specular light</b>: Light that hits an object and bounces with minimal dispersion, creating
+                            specular highlight at the incident location. Its strength is determined using the angle between the incident
+                            light vector and the vector to the camera, where the smaller the angle, the brighter the highlight.
+                        </li>
+                        <li><b style="color:#4EC9B0">Ambient light</b>: Light that colors the entire object, regardless of the light's source. This 
+                            is implemented as a color in the shader, serving as an approximation of raycast light where light bounces around
+                            many surfaces and is seen almost everywhere.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>Copyright © 2025 Jaidyn Holt</p>
+            <a href="https://github.com/jaidynholt" target="_blank">
+                <div class="iconButton">
+                    <img class="icon" src="../../assets/githubIcon.svg" alt="GitHub link" />
+                </div>
+            </a>
+            <a href="https://holtj.itch.io/" target="_blank">
+                <div class="iconButton">
+                    <img class="icon" src="../../assets/itchioIcon.svg" alt="itch.io link" />
+                </div>
+            </a>
+            <a href="https://linkedin.com/in/jaidynholt" target="_blank">
+                <div class="iconButton">
+                    <img class="icon" src="../../assets/linkedinIcon.svg" alt="LinkedIn link" />
+                </div>
+            </a>
+            <a href="mailto: jaidyn.h.holt@gmail.com" target="_blank">
+                <div class="iconButton">
+                    <img class="icon" src="../../assets/emailIcon.svg" alt="email link" />
+                </div>
+            </a>
+        </footer>
+    </body>
+
+</html>
