@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <title>Jaidyn Holt Portfolio</title>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" href="style.css">
+    <script src="../src/index.js"></script>
+    <body>
+        <nav id="navBar" class="navBar">
+            <ul>
+                <li class="logo"><a href="../index.html" target="_self">JAIDYN HOLT</a></li>
+                <div class="navBarToggle">
+                    <li><a href="../index.html" target="_self">Game Development</a></li>
+                    <li><a href="softwareDevelopment.html" target="_self">Software Development</a></li>
+                    <li><a class="current" href="digitalArt.html" target="_self">Digital Art</a></li>
+                    <li><a href="contact.html" target="_self">Contact</a></li>
+                </div>
+            </ul>
+            <button id="navButton" class="navBarMenuButton" onClick="ToggleNavBar()">
+                <div class="menuIconOpen">
+                    <svg  xmlns="http://www.w3.org/2000/svg"
+                    width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <line x1="4" y1="6" x2="20" y2="6" />
+                        <line x1="4" y1="12" x2="20" y2="12" />
+                        <line x1="4" y1="18" x2="20" y2="18" />
+                    </svg>
+                </div>
+                <div class="menuIconClose">
+                    <svg  xmlns="http://www.w3.org/2000/svg"
+                    width="24"  height="24"  viewBox="0 0 24 24"  fill="none"
+                    stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-x">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M18 6l-12 12" />
+                        <path d="M6 6l12 12" />
+                    </svg>
+                </div>
+            </button>
+        </nav>
+        <div id="toTop" class="toTopButton invisible" onClick="ScrollToPosition(0)">
+            <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170.05 113.31">
+                <g id="Layer_1-2" data-name="Layer 1">
+                    <path class="cls-1" d="m74.04,4.54L7.19,71.39c-9.59,9.59-9.59,25.14,0,34.73h0c9.59,9.59,25.14,9.59,34.73,0l35.86-35.86c4.02-4.02,10.53-4.02,14.54,0l35.81,35.81c9.59,9.59,25.13,9.59,34.72,0h0c9.59-9.59,9.59-25.14,0-34.73L95.97,4.54c-6.06-6.05-15.88-6.05-21.94,0Z"/>
+                </g>
+            </svg>
+        </div>
+        <div id="minArea">
+            <div id="banner">
+                <div class="row">
+                    <div class="bannerText centered">
+                       <h1>PORTFOLIO</h1><br>
+                        <h2>Digital Art</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="projectGrid">
+                    <div id="Modeling3D_box" class="projectBox model filteredOn" onclick="NavigationButton('digitalArt/modeling.html')">
+                        <div class="projectBoxImage"><img src="../images/Artwork/TapeDispenser_3.png"></div> 
+                        <h1>3D modeling</h1>
+                        <p>
+                            A 3D modeling project using Autodesk Maya involving the full process from reference to rendering.
+                        </p>
+                        <div class="softwareIconGrid">
+                            <div class="softwareIcon"><img src="../assets/mayaIcon.svg" alt="Autodesk Maya icon" /></div>
+                            <div class="softwareIcon"><img src="../assets/photoshopIcon.svg" alt="Adobe Photoshop icon" /></div>
+                        </div>
+                    </div>
+                    <div id="PlantFood_box" class="projectBox anim illu filteredOn" onclick="NavigationButton('digitalArt/plantFood.html')">
+                        <div class="projectBoxImage"><img src="../images/PlantFoodScreenshot.png"></div> 
+                        <h1>Plant Food</h1>
+                        <p>
+                            A 2D animation short film made with Toon Boom Harmony and original environment art
+                            and character rigs.
+                        </p>
+                        <div class="softwareIconGrid">
+                            <div class="softwareIcon"><img src="../assets/harmonyIcon.svg" alt="Toon Boom Harmony icon" /></div>
+                            <div class="softwareIcon"><img src="../assets/afterEffectsIcon.svg" alt="Adobe After Effects icon" /></div>
+                            <div class="softwareIcon"><img src="../assets/photoshopIcon.svg" alt="Adobe Photoshop icon" /></div>
+                        </div>
+                    </div>
+                    <div id="ThinkInside_box" class="projectBox anim filteredOn" onclick="NavigationButton('digitalArt/thinkInsideTheBox.html')">
+                        <div class="projectBoxImage"><img src="../images/NormanFinalFilmScreenshot.png"></div> 
+                        <h1>Think Inside the Box</h1>
+                        <p>
+                            A 3D animation short film made with Autodesk Maya featuring the Norman rig.
+                        </p>
+                        <div class="softwareIconGrid">
+                            <div class="softwareIcon"><img src="../assets/mayaIcon.svg" alt="Autodesk Maya icon" /></div>
+                            <div class="softwareIcon"><img src="../assets/premiereIcon.svg" alt="Adobe Premiere Pro icon" /></div>
+                            <div class="softwareIcon"><img src="../assets/afterEffectsIcon.svg" alt="Adobe After Effects icon" /></div>
+                            <div class="softwareIcon"><img src="../assets/photoshopIcon.svg" alt="Adobe Photoshop icon" /></div>
+                        </div>
+                    </div>
+                    <div id="QBert_box" class="projectBox anim filteredOn" onclick="NavigationButton('digitalArt/qbertAndTheBall.html')">
+                        <div class="projectBoxImage"><img src="../images/QBert_1.png"></div> 
+                        <h1>QBert and the Ball</h1>
+                        <p>
+                            A 3D animation short film made with Autodesk Maya at the Ringling College of Art and Design
+                            Precollege Program using a Qbert rig and ball rig.
+                        </p>
+                        <div class="softwareIconGrid">
+                            <div class="softwareIcon"><img src="../assets/mayaIcon.svg" alt="Autodesk Maya icon" /></div>
+                        </div>
+                    </div>
+                    <div id="CC_box" class="projectBox ux design filteredOn" onclick="NavigationButton('userExperience/campusCompanion.html')">
+                        <div class="projectBoxImage"><img src="../images/CampusCompanion_1.png"></div> 
+                        <h1>Campus Companion</h1>
+                        <p>
+                            A user experience and user design project for a mobile navigation app tailored
+                            for pedestrians on the University of Florida's campus.
+                        </p>
+                        <div class="softwareIconGrid">
+                            <div class="softwareIcon"><img src="../assets/figmaIcon.svg" alt="Figma icon" /></div>
+                        </div>
+                    </div>
+                    <div id="CKI_box" class="projectBox illu design filteredOn" onclick="NavigationButton('digitalArt/ckiWebsite.html')">
+                        <div class="projectBoxImage"><img src="../images/CKI/Enchanted_forest_art_4.jpg"></div> 
+                        <h1>UF CKI Website</h1>
+                        <p>
+                            As 2024-25 webmaster of the University of Florida chapter of Circle K Intermational,
+                            the collegiate branch of Kiwanis, I designed the website and created original artwork
+                            and assets for it.
+                        </p>
+                        <div class="softwareIconGrid">
+                            <div class="softwareIcon"><img src="../assets/photoshopIcon.svg" alt="Adobe Photoshop icon" /></div>
+                        </div>
+                    </div>
+                    <div id="Illustration_box" class="projectBox illu filteredOn" onclick="NavigationButton('digitalArt/graphics.html')">
+                        <div class="projectBoxImage"><img src="../images/Artwork/artwork_3.JPG"></div> 
+                        <h1>Illustrations / Graphics / Infographics</h1>
+                        <p>
+                            Various digital drawings illustrations, and infographics as part of multiple
+                            projects over the years for course work and personal studies.
+                        </p>
+                        <div class="softwareIconGrid">
+                            <div class="softwareIcon"><img src="../assets/photoshopIcon.svg" alt="Adobe Photoshop icon" /></div>
+                            <div class="softwareIcon"><img src="../assets/illustratorIcon.svg" alt="Adobe Illustrator icon" /></div>
+                        </div>
+                    </div>
+                                        <div id="MotionGraphics_box" class="projectBox anim filteredOn" onclick="NavigationButton('digitalArt/motionGraphics.html')">
+                        <div class="projectBoxImage"><img src="../images/DeathStarMotionGraphic_1.png"></div> 
+                        <h1>Motion Graphics</h1>
+                        <p>
+                            Various motion graphics created with Adobe After Effects and Illustrator at the Ringling College
+                            of Art and Design Precollege Program.
+                        </p>
+                        <div class="softwareIconGrid">
+                            <div class="softwareIcon"><img src="../assets/afterEffectsIcon.svg" alt="Adobe After Effects icon" /></div>
+                            <div class="softwareIcon"><img src="../assets/illustratorIcon.svg" alt="Adobe Illustrator icon" /></div>
+                            <div class="softwareIcon"><img src="../assets/photoshopIcon.svg" alt="Adobe Photoshop icon" /></div>
+                        </div>
+                    </div>
+                    <!-- <div id="Artistree_box" class="projectBox ux design filteredOn" onclick="NavigationButton('userExperience/artistree.html')">
+                        <div class="projectBoxImage"><img src="../images/Artistree_2.png"></div> 
+                        <h1>Artistree</h1>
+                        <p>
+                            A brand design and interactive website prototype project for a sustainable fashion brand.
+                        </p>
+                        <div class="softwareIconGrid">
+                            <div class="softwareIcon"><img src="../assets/figmaIcon.svg" alt="Figma icon" /></div>
+                        </div>
+                    </div> -->
+                    <!-- <div id="SocialMedia_box" class="projectBox design illu filteredOn" onclick="NavigationButton('digitalArt/socialMedia.html')">
+                        <div class="projectBoxImage"><img src="../images/SocialPosts/bmp_2.jpg"></div> 
+                        <h1>Social Media</h1>
+                        <p>
+                            Original graphics created for the BADAS Mentorship Program's social media.
+                        </p>
+                        <div class="softwareIconGrid">
+                            <div class="softwareIcon"><img src="../assets/photoshopIcon.svg" alt="Adobe Photoshop icon" /></div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>Copyright © 2025 Jaidyn Holt</p>
+            <a href="https://github.com/jaidynholt" target="_blank">
+                <div class="iconButton">
+                    <img class="icon" src="../assets/githubIcon.svg" alt="GitHub link" />
+                </div>
+            </a>
+            <a href="https://holtj.itch.io/" target="_blank">
+                <div class="iconButton">
+                    <img class="icon" src="../assets/itchioIcon.svg" alt="itch.io link" />
+                </div>
+            </a>
+            <a href="https://linkedin.com/in/jaidynholt" target="_blank">
+                <div class="iconButton">
+                    <img class="icon" src="../assets/linkedinIcon.svg" alt="LinkedIn link" />
+                </div>
+            </a>
+            <a href="mailto: jaidyn.h.holt@gmail.com" target="_blank">
+                <div class="iconButton">
+                    <img class="icon" src="../assets/emailIcon.svg" alt="email link" />
+                </div>
+            </a>
+        </footer>
+    </body>
+
+</html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <meta charset="UTF-8">
-    <title>Contact | Jaidyn Holt Portfolio</title>
+    <title>Jaidyn Holt Portfolio</title>
     <meta name="viewport" content="width = device-width, initial-scale = 1">
     <link rel="stylesheet" href="style.css">
     <script src="../src/index.js"></script>
@@ -11,9 +11,9 @@
                 <li class="logo"><a href="../index.html" target="_self">JAIDYN HOLT</a></li>
                 <div class="navBarToggle">
                     <li><a href="../index.html" target="_self">Game Development</a></li>
-                    <li><a href="softwareDevelopment.html" target="_self">Software Development</a></li>
+                    <li><a class="current" href="softwareDevelopment.html" target="_self">Software Development</a></li>
                     <li><a href="digitalArt.html" target="_self">Digital Art</a></li>
-                    <li><a class="current" href="contact.html" target="_self">Contact</a></li>
+                    <li><a href="contact.html" target="_self">Contact</a></li>
                 </div>
             </ul>
             <button id="navButton" class="navBarMenuButton" onClick="ToggleNavBar()">
@@ -48,55 +48,50 @@
             </svg>
         </div>
         <div id="minArea">
-            <div class="padding"></div>
+            <div id="banner">
+                <div class="row">
+                    <div class="bannerText centered">
+                        <h1>PORTFOLIO</h1><br>
+                        <h2>Software Development</h2>
+                    </div>
+                </div>
+            </div>
             <div class="section">
-                <div class="sectionText">
-                    <h1>About Me</h1>
-                </div>
-                <div class="sectionText half">
-                    <h3>University of Florida</h3>
-                    <h3>BA Digital Arts and Sciences | BS Computer Science</h3> <br>
-
-                    <!-- Bio text -->
-                    <p>
-                        Hello! I am an undergraduate student at the University of Florida
-                        pursuing a dual major in Digital Arts and Sciences (BA) and
-                        Computer Science (BS) with a focus in game development.
-                    </p>
-                    <p>
-                        I am a game developer and technical artist. I am passionate about creating fun experiences
-                        and interactive stories through a creative combination of art and technology.
-                    </p>
-                </div>
-                <div class="sectionText half">
-                    <p>
-                        Contact me at
-                        <a class="textLink" href="mailto: jaidyn.h.holt@gmail.com" target="_blank">jaidyn.h.holt@gmail.com</a>
-                    </p>                      
-                    <div class="linkGrid">
-                        <div class="linkButton" onclick="ExternalLinkButton('../files/resume.pdf')">
-                            <div class="iconButtonLarge">
-                                <img class="icon" src="../assets/resumeIcon.svg" alt="itch.io link" />
-                            </div>
-                            <h1>Resume</h1>
+                <div class="projectGrid">
+                    <div id="ScootEZ_box" class="projectBox software filteredOn" onclick="NavigationButton('software/scootez.html')">
+                        <div class="projectBoxImage"><img src="../images/scootez_1.png"></div>
+                        <h1>ScootEZ</h1>
+                        <p>
+                            A MERN stack electric scooter rental website application developed
+                            in a team of four over four weeks.
+                        </p>
+                        <div class="softwareIconGrid">
+                            <div class="softwareIcon"><img src="../assets/reactIcon.svg" alt="React icon" /></div>
+                            <div class="softwareIcon"><img src="../assets/javascriptIcon.svg" alt="JavaScript icon" /></div>
+                            <div class="softwareIcon"><img src="../assets/nodejsIcon.svg" alt="Node JS icon" /></div>
+                            <div class="softwareIcon"><img src="../assets/mongodbIcon.svg" alt="MongoDB icon" /></div>
                         </div>
-                        <div class="linkButton" onclick="ExternalLinkButton('https:\/\/linkedin.com/in/jaidynholt')">
-                            <div class="iconButtonLarge">
-                                <img class="icon" src="../assets/linkedinIcon.svg" alt="itch.io link" />
-                            </div>
-                            <h1>LinkedIn</h1>
+                    </div>
+                    <div id="NN_box" class="projectBox software design filteredOn" onclick="NavigationButton('software/nutritionNexus.html')">
+                        <div class="projectBoxImage"><img src="../images/NutritionNexus_1.png"></div>  
+                        <h1>Nutrition Nexus</h1>
+                        <p>
+                            A React web application for finding recipes that accommodate everyone's dietary needs
+                            using a nutritional recipe database API.
+                        </p>
+                        <div class="softwareIconGrid">
+                            <div class="softwareIcon"><img src="../assets/reactIcon.svg" alt="React icon" /></div>
+                            <div class="softwareIcon"><img src="../assets/javascriptIcon.svg" alt="JavaScript icon" /></div>
                         </div>
-                        <div class="linkButton" onclick="ExternalLinkButton('https:\/\/holtj.itch.io/')">
-                            <div class="iconButtonLarge">
-                                <img class="icon" src="../assets/itchioIcon.svg" alt="itch.io link" />
-                            </div>
-                            <h1>Itch.io</h1>
-                        </div>
-                        <div class="linkButton" onclick="ExternalLinkButton('https:\/\/github.com/jaidynholt')">
-                            <div class="iconButtonLarge">
-                                <img class="icon" src="../assets/githubIcon.svg" alt="itch.io link" />
-                            </div>
-                            <h1>GitHub</h1>
+                    </div>
+                    <div id="OCR_box" class="projectBox software design filteredOn" onclick="NavigationButton('software/handwritingOCR.html')">
+                        <div class="projectBoxImage"><img src="../images/HandwritingOCR/ocr_2.png"></div>  
+                        <h1>Handwriting OCR Model App</h1>
+                        <p>
+                            An application using a trained OCR machine learning model to take a photo of handwriting, recognize it as text, and analyze it with NLTK.
+                        </p>
+                        <div class="softwareIconGrid">
+                            <div class="softwareIcon"><img src="../assets/pythonIcon.svg" alt="Python icon" /></div>
                         </div>
                     </div>
                 </div>
@@ -126,4 +121,5 @@
             </a>
         </footer>
     </body>
+
 </html>
